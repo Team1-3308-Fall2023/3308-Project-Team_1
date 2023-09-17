@@ -13,9 +13,9 @@ Day/Time/TimeZone for the scheduled team weekly meeting (30 minutes via Zoom)<br
 Vision statement: what would you tell potential customers?<br>
 Motivation: why are you working on this project?<br>
 Risks to project completion, possibly including:<br>
-> new language or working environment<br>
-> no prior experience working with these team members<br>
-> lack of some needed resources<br>
+new language or working environment<br>
+no prior experience working with these team members<br>
+lack of some needed resources<br>
 Mitigation Strategy for above risks<br>
 Development method: scrum, kanban, waterfall: with specifics!<br>
 Project Tracking Software link (Trello is most common)<br>
