@@ -1,5 +1,5 @@
 # 3308-Project-Team_1
-Project title (must be something representing your project)
+Project title (must be something representing your project) <br>
 Team 1
 Team Name: The Bash-ful Scripting Squad
 Product Name: ???
