@@ -8,7 +8,7 @@ Team members: list the name, git username, and email for each member.<br>
 > Spencer Oram, git username??? Spencer.Oram@colorado.edu <br>
 > Brooke ???, git username???, brne5817@colorado.edu <br>
 > Anthony Le, git username???, Anthony.Le@colorado.edu  <br>
-> Rebecca Toland, git username???, reto6656@colorado.edu     <br><br>
+> Rebecca Toland, git username???, reto6656@colorado.edu     <br>
 
 Day/Time/TimeZone for the scheduled team weekly meeting (30 minutes via Zoom)<br>
 Vision statement: what would you tell potential customers?<br>
