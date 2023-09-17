@@ -4,10 +4,10 @@ Team 1<br>
 Team Name: The Bash-ful Scripting Squad<br>
 Product Name: ???<br>
 Team members: list the name, git username, and email for each member.<br>
-> Linnea Fritz-Watson, linneacfw, lifr9411@colorado.edu
-> Spencer Oram, git username??? Spencer.Oram@colorado.edu 
-> Brooke ???, git username???, brne5817@colorado.edu 
-> Anthony Le, git username???, Anthony.Le@colorado.edu  
+> Linnea Fritz-Watson, linneacfw, lifr9411@colorado.edu <br>
+> Spencer Oram, git username??? Spencer.Oram@colorado.edu <br>
+> Brooke ???, git username???, brne5817@colorado.edu <br>
+> Anthony Le, git username???, Anthony.Le@colorado.edu  <br>
 > Rebecca Toland, git username???, reto6656@colorado.edu     <br>
 Day/Time/TimeZone for the scheduled team weekly meeting (30 minutes via Zoom)<br>
 Vision statement: what would you tell potential customers?<br>
