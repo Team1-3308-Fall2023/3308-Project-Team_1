@@ -2,7 +2,7 @@
 - Project title (must be something representing your project) <br>
 - Team 1<br>
 - Team Name: The Bash-ful Scripting Squad<br>
-- Product Name: ???<br>
+- Product Name: Recipe Holder<br>
 - Team members: list the name, git username, and email for each member.<br>
 > Linnea Fritz-Watson, linneacfw, lifr9411@colorado.edu <br>
 > Spencer Oram, spencer2435 Spencer.Oram@colorado.edu <br>
@@ -10,7 +10,7 @@
 > Anthony Le, anthole95, Anthony.Le@colorado.edu  <br>
 > Rebecca Toland, rtoland, reto6656@colorado.edu     <br>
 
-- Day/Time/TimeZone for the scheduled team weekly meeting (30 minutes via Zoom)??? <br> 
+- Day/Time/TimeZone for the scheduled team weekly meeting (30 minutes via Zoom) Sunday's @ 3pm <br> 
 - Vision statement: what would you tell potential customers???? <br>
 - Motivation: why are you working on this project???? <br>
 - Risks to project completion, possibly including:??? <br>
