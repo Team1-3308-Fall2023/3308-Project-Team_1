@@ -7,7 +7,7 @@
 > Linnea Fritz-Watson, linneacfw, lifr9411@colorado.edu <br>
 > Spencer Oram, spencer2435 Spencer.Oram@colorado.edu <br>
 > Brooke Neupert, BrookeNeupert, brne5817@colorado.edu <br>
-> Anthony Le, git username???, Anthony.Le@colorado.edu  <br>
+> Anthony Le, anthole95, Anthony.Le@colorado.edu  <br>
 > Rebecca Toland, rtoland, reto6656@colorado.edu     <br>
 
 - Day/Time/TimeZone for the scheduled team weekly meeting (30 minutes via Zoom)??? <br> 
