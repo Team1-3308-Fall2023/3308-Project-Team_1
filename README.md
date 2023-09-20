@@ -5,7 +5,7 @@
 - Product Name: ???<br>
 - Team members: list the name, git username, and email for each member.<br>
 > Linnea Fritz-Watson, linneacfw, lifr9411@colorado.edu <br>
-> Spencer Oram, git username??? Spencer.Oram@colorado.edu <br>
+> Spencer Oram, spencer2435 Spencer.Oram@colorado.edu <br>
 > Brooke Neupert, git username???, brne5817@colorado.edu <br>
 > Anthony Le, git username???, Anthony.Le@colorado.edu  <br>
 > Rebecca Toland, rtoland, reto6656@colorado.edu     <br>
