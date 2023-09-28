@@ -16,12 +16,12 @@
 > Anthony Le, anthole95, Anthony.Le@colorado.edu  <br>
 > Rebecca Toland, rtoland, reto6656@colorado.edu     <br>
 
-- Day/Time/TimeZone for the scheduled team weekly meeting (30 minutes via Zoom)??? <br> 
+- Day/Time/TimeZone for the scheduled team weekly meeting (30 minutes via Zoom)<br> 
 > Meetings held on Sundays at 3:00 PM MT <br>
 > * *depending on team member commitments and unexpected availability into each sprint week, weekly meetings may be held on a different day than scheduled*<br>
-- Vision statement: what would you tell potential customers???? <br>
+- Vision statement: <br>
 > RecipeVault seeks to simplify the cooking experience for aspiring chefs and home cookers around the world, providing them with a seamless platform to organize their recipes and learn new ones. It's a smart solution that not only recommends new recipes tailored to your tastes, but also helps you minimize food waste and save money by suggesting dishes based on the ingredients you already have on hand.   <br>   
-- Motivation: why are you working on this project: <br>
+- Motivation: <br>
 > To build a new understanding and appreciation of the software dev cycle <br>
 > To learn how to implement algorithms and database functionality to create a workign deliverable <br>
 > To build an app that the whole team is proud of <br>
@@ -49,8 +49,8 @@
     2. **Sprint backlog:** “The list of requirements and associated tasks in a given sprint (aka iterations sprints)”<br>
     3. **Burndown charts:** “Visual representations of the progress within a sprint and within the project as a whole.”<br>
     4. **Shippable functionality:** “The usable product that meets the customer’s business goals”<br><br>
-*The outline of the scrum dev method was gathered from ”Agile for Dummies”, and the specifics were filled in by the team.*<br><br>
-- Project Tracking Software link (Trello is most common)??? <br>
+*The outline of the scrum dev method was gathered from ”Agile for Dummies”, and the specifics were filled in by the team*<br><br>
+- Project Tracking Software link: <br>
 > https://trello.com/b/EIXK6cRo/recipe-holder-3308?utm_source=eval-email&utm_medium=email&utm_campaign=board-invite <br>
 
 [Make sure to add access for the instructor(s)]<br>
