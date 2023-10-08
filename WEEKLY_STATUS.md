@@ -8,6 +8,7 @@
 > Rebecca Toland <br>
 
 ***October 2nd - 8th***
+
 Trello Screenshot
 ![Screenshot 2023-10-08 at 4 27 42 PM](https://github.com/Team1-3308-Fall2023/3308-Project-Team_1/assets/97182468/981866b6-db26-47c5-b068-f4360b8adc82)
 
