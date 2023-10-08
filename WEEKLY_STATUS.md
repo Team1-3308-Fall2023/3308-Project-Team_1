@@ -15,6 +15,6 @@ Trello Screenshot
 - Other notes from this week:
 > Linnea conducted research on the project's layout and timeline. Additionally, she as organized and documented tasks within Trello. <br>
 > Anthony formulated the user stories and integrated them into our repository. <br>
-> Brooke is actively researching the UX/UI and while exploring various database options. <br>
+> Brooke is actively researching the UX/UI while exploring various database options. <br>
 > Spencer has begun the SQL journey which includes working with the platform. He has also research database options for the project.<br>
 > Rebecca has contributed on the projects organizational aspect by incorporating the weekly standup meeting and milestone due dates into Trello. <br>
