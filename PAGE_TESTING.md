@@ -145,30 +145,28 @@ Parameters:<br>
 * User ID<br>
   - Needed to link the users rating of the meal to their account to influence personalized recommendations<br>
   - Needed so that user can save recipe to their unique vault if they want to<br>
-
 <br>
+
 Data Needed to Render Page: <br>
-* Recipe Titles<br>
-* Recipe prep time<br>
-* Recipe cook time<br>
-* Recipe serving size<br>
-* List of ingredients needed for recipe<br>
-* Cooking Instructions<br>
-* Comments previously posted on recipe<br>
+* Recipe Titles
+* Recipe prep time
+* Recipe cook time
+* Recipe serving size
+* List of ingredients needed for recipe
+* Cooking Instructions
+* Comments previously posted on recipe
 
-<br>
 Links to other Destinations:<br>
-* Link to Vault page<br>
-* Link to Search page<br>
-* Link back to user's profile page<br>
-* Links to any other pages deemed necessary during development of website<br>
+* Link to Vault page
+* Link to Search page
+* Link back to user's profile page
+* Links to any other pages deemed necessary during development of website
 
-<br>
 Tests to Verify Rendering:<br>
-* Ensure that when another destination is selected, the link works and the user is taken to the correct page.<br>
-* Test the functionality of one user leaving a comment and it still being there when another user views the same recipe.<br>
-* Ensure that any changes to ratings remain after the user leaves the page<br>
-* Verify that a new or updated rating will influence the recipe recommendations on other parts of the application.<br>
+* Ensure that when another destination is selected, the link works and the user is taken to the correct page.
+* Test the functionality of one user leaving a comment and it still being there when another user views the same recipe.
+* Ensure that any changes to ratings remain after the user leaves the page
+* Verify that a new or updated rating will influence the recipe recommendations on other parts of the application.
 
 
 
