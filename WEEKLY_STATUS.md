@@ -42,5 +42,6 @@
 >
 
 ***Date:October 9th - 15th***
-##Trello Screenshot
+
+## Trello Screenshot
 <img width="1779" alt="Screenshot 2023-10-19 at 7 00 23 PM" src="https://github.com/Team1-3308-Fall2023/3308-Project-Team_1/assets/97182468/bef8825b-5b67-4968-8398-d029535c0d9e">
