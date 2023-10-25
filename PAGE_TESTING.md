@@ -139,7 +139,7 @@ Tests For Page: <br>
 
 Page Description: <br>
 * The Recipe Page displays a give recipe and all the information required to make that recipe. Users are also able to rate the recipe, save the recipe, and leave a comment if the wish to.<br>
-![Mockup of Recipe Page](https://tinypic.host/images/2023/10/25/recipe_page.png)
+<img src="https://tinypic.host/images/2023/10/25/recipe_page.png">
 
 Parameters:<br>
 <br>
