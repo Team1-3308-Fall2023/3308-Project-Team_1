@@ -155,12 +155,14 @@ Data Needed to Render Page: <br>
 * List of ingredients needed for recipe<br>
 * Cooking Instructions<br>
 * Comments previously posted on recipe<br>
+
 <br>
 Links to other Destinations:<br>
 * Link to Vault page<br>
 * Link to Search page<br>
 * Link back to user's profile page<br>
 * Links to any other pages deemed necessary during development of website<br>
+
 <br>
 Tests to Verify Rendering:<br>
 * Ensure that when another destination is selected, the link works and the user is taken to the correct page.<br>
