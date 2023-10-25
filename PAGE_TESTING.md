@@ -144,8 +144,8 @@ Page Description: <br>
 Parameters:<br>
 <br>
 * User ID<br>
-  * Needed to link the users rating of the meal to their account to influence personalized recommendations<br>
-  * Needed so that user can save recipe to their unique vault if they want to<br>
+  - Needed to link the users rating of the meal to their account to influence personalized recommendations<br>
+  - Needed so that user can save recipe to their unique vault if they want to<br>
     <br>
 Data Needed to Render Page:<br>
 * Recipe Titles<br>
