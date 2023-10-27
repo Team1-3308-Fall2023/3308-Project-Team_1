@@ -196,3 +196,38 @@ Links to other Destinations:<br>
 Tests to Verify Rendering:<br>
 * Test to make sure links return user to previous page, home page, create an account and login page
 * Test to make sure user without an account are redirected to error page stating they need an account to access said functionality
+
+
+
+
+# Home Page:
+
+Page Description: <br>
+* The home page is the default page when the user visits the website. It will have many features to direct the user to their current needs. <br>
+
+<img width="552" alt="Screenshot 2023-10-26 at 6 47 52 PM" src="https://github.com/Team1-3308-Fall2023/3308-Project-Team_1/assets/97182468/950a2672-8b8c-45fc-a857-e8fff5e115f6">
+
+Parameters: <br>
+* Users Saved Recipes
+* Users Preferences to recommend recipes within range
+* History of recently viewed recipes
+
+Data Needed to Render Page: <br>
+* Images and multimedia (images, descriptions and titles of recipes)
+* Links to recipes
+
+Links to other Destinations: <br>
+* Sign-in Page
+* Saved Recipes
+* Trending Recipes
+* Occasional Recipes
+* Recipes (random recipes to browse)
+* Recipe of the Day
+* Recently Viewd Recipes
+
+Test to Verify Rendering: <br>
+* Test to make sure each destination is the correct pathway.
+* Ensure search bar works properly
+* Images and multimedia work correcly and are not broken
+
+
