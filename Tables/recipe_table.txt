@@ -1,0 +1,12 @@
+PK ID int
+title varchar(45)
+ingredients
+nutrition facts
+servings
+rating (average of all ratings to use as filter)
+category FK references ID in catergory_table
+
+0, "Lentil, Apple, and Turkey Wrap", 
+1, "The best blts"
+2, "Ham and Spring Vegetable Salad with Shallot Vinaigrette"
+

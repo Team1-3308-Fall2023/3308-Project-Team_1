@@ -1,0 +1,6 @@
+PK ID
+catergory name
+
+0, vegan
+1, vegetrian
+2, glutten free

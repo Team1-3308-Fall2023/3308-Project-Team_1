@@ -1,0 +1,4 @@
+PK username varchar(45)
+saved recipes
+dietary pref
+category
