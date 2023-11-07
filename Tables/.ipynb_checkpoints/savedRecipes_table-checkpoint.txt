@@ -1,6 +1,2 @@
-FK references username varchar (45) (user_table)
-FK References recipe ID (recipe_table)
-
-user1, 5
-user2, 0
-user3, 6
+UserID (Foreign Key referencing Users.UserID)
+RecipeID (Foreign Key referencing Recipes.RecipeID)

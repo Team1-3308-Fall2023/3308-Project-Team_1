@@ -1,6 +1,2 @@
-PK ID int
-cat_name
-
-1, breakfast
-2, lunch
-3, dinner
+CategoryID (Primary Key)
+CategoryName (e.g., 'Lunch', 'Snack', 'Dinner', etc.)

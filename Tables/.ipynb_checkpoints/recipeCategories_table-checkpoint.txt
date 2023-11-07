@@ -1,0 +1,3 @@
+RecipeID (Foreign Key referencing Recipes.RecipeID)
+CategoryID (Foreign Key referencing Categories.CategoryID)
+PRIMARY KEY (RecipeID, CategoryID) 

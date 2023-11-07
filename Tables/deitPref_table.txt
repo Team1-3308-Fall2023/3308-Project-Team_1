@@ -1,0 +1,2 @@
+PreferenceID (Primary Key)
+PreferenceName (e.g., Vegan, Gluten-Free, etc.)

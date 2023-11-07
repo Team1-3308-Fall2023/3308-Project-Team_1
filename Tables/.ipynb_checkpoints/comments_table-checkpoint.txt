@@ -1,2 +1,5 @@
+CommentID (Primary Key)
 UserID (Foreign Key referencing Users.UserID)
 RecipeID (Foreign Key referencing Recipes.RecipeID)
+CommentText
+DatePosted

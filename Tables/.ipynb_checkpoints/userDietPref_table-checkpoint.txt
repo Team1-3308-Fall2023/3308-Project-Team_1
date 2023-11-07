@@ -1,0 +1,2 @@
+UserID (Foreign Key referencing Users.UserID)
+PreferenceID (Foreign Key referencing DietaryPreferences.PreferenceID)
