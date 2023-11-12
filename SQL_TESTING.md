@@ -25,6 +25,8 @@ This document outlines the various SQL tables that will be used in the RecipeVau
     2. Open Filter Menu next to search bar
     3. Under "Meals" ensure no categories are selected
     4. Open recipe tiles on page to ensure that recipe tiles of all three categories are displayed
+  - Expected Result:
+    -Recipe tiles of all three categories are displayed
   
 - If all categories are selected, all recipes appear.
   - User case name:
