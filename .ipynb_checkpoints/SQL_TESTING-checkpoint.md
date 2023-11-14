@@ -178,6 +178,75 @@ This document outlines the various SQL tables that will be used in the RecipeVau
 <br>
 <br>
 
+    Table Name: SavedRecipes
+    Description: This table stores the relationship between users and the recipes they have saved. It links user profiles to their saved recipe IDs.
+    Fields:
+        UserID (Foreign Key referencing Users.UserID): INT
+        RecipeID (Foreign Key referencing Recipes.RecipeID): INT
+    Tests:
+        Foreign Key Constraint Test:
+            Ensure UserID and RecipeID references an existing UserID in the Users table and existing RecipeID in the Recipes table
+        Data Consistency Test:
+            Validate that the combination of UserID and RecipeID is unique, ensuring that a user cannot save the same recipe multiple times
+        Insert Test:
+            Insert a new entry into the SavedRecipes table with a valid UserID and RecipeID, and confirm that it is successfully added.
+        Delete Test:
+            Remove a saved recipe record from the table and verify that it is deleted without affecting other records.
+<br>
+<br>
+<br>
+
+    Table Name: Ratings
+    Description: This table stores user ratings for recipes, indicating their satisfaction with a particular recipe on a scale of 1 to 5.
+    Fields:
+        UserID (Foreign Key referencing Users.UserID): INT
+        RecipeID (Foreign Key referencing Recipes.RecipeID): INT
+        Rating (constraint where Rating >= 1 AND Rating <= 5): INT
+    Tests:
+        Foreign Key Constraint Test:
+            Ensure that the UserID in Ratings references an existing UserID in the Users table.
+            Verify that the RecipeID in Ratings references an existing RecipeID in the Recipes table.
+        Data Consistency Test:
+            Validate that the Rating field contains values within the range of 1 to 5.
+        Insert Test:
+            Insert a new rating with a valid UserID, RecipeID, and Rating, and confirm that it is successfully added.
+            Verify that a rating that is outside our defined constraint (Rating >= 1 AND Rating <= 5) can't be added
+        Update Test:
+            Update an existing rating to change the Rating value and ensure that the change is correctly reflected.
+    
+<br>
+<br>
+<br>
+
+    Table Name: Comments
+    Description: This table stores comments made by users on recipes, including the comment text, the user who posted it, and the date it was posted.
+    Fields:
+        CommentID (Primary Key): INT
+        UserID (Foreign Key referencing Users.UserID): INT 
+        RecipeID (Foreign Key referencing Recipes.RecipeID): INT 
+        CommentText: TEXT (can add constraint where users are only allowed to type x amount of characters/words for a comment)
+        DatePosted: DATETIME
+    Tests:
+        Foreign Key Constraint Test:
+            Ensure that the UserID in Comments references an existing UserID in the Users table.
+            Verify that the RecipeID in Comments references an existing RecipeID in the Recipes table.
+        Prinmary Key Constraint Test:
+            Confirm that CommentID is unique for each record in the Comments table.
+        Insert Test:
+            Insert a new comment with valid UserID, RecipeID, CommentText, and DatePosted, and confirm that it is successfully added.
+        Update Test:
+            Update an existing comment to modify the CommentText or DatePosted, and verify that the changes are reflected correctly.
+        Delete Test:
+            Delete a comment from the table and confirm that it is removed without affecting other records.
+        Boundary Value Test:
+            Test with very long CommentText and DatePosted values to ensure the table handles them correctly.
+        Data Consistency Test:
+            Validate that DatePosted values are in the correct date format and that CommentText follows character limits if any are defined.
+    
+<br>
+<br>
+<br>
+
 ### Data access methods
 
        Use case name : 
