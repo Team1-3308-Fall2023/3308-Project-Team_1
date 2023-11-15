@@ -4,11 +4,10 @@
 This document outlines the various SQL tables that will be used in the RecipeVault website project <br>
 ### Category Table: <br>
 #### Description:
-- Contains the possible categories that a recipe could be placed into. This table will contain the recipes that fall into each of the meal categories so that search results can be filtered to only show that category of meal
+- Contains the possible categories that a recipe could be placed into. This table will contain all the possible categories that each recipe could fall into. 
 #### Table Items: 
-- Breakfast: Contains all recipes that are breakfast recipes
-- Lunch: Contains all recipes that are lunch recipes
-- Dinner: Contains all recipes that are Dinner recipes. There may be some overlap with lunch.
+- CategoryID (Primary Key): INT NOT NULL AUTO_INCREMENT
+- CategoryName (category name): VARCHAR(255) (ex. Lunch, Breakfast, Dinner)
 #### Tests: 
 - Insert Test:
   - If a category is selected under a recipe, that recipe is added to that category
@@ -247,6 +246,43 @@ This document outlines the various SQL tables that will be used in the RecipeVau
             Test with very long CommentText and DatePosted values to ensure the table handles them correctly.
         Data Consistency Test:
             Validate that DatePosted values are in the correct date format and that CommentText follows character limits if any are defined.
+    
+<br>
+<br>
+<br>
+
+    Table Name: Recipes Table
+    Description: This table stores all the recipes the app has to offer 
+    Fields:
+        RecipeID (Primary Key): INT NOT NULL AUTO_INCREMENT
+        recipeName (recipe name): VARCHAR(255)
+        ingridients (comma-seperated list): VARCHAR(255)
+        directions (directions on how to make recipe): VARCHAR(255)
+        averageRating (rating base on average of all ratings): FLOAT
+        
+    Tests:
+        UNIQUE Constraint Tests:
+            Verify that the  recipeName, ingridients, and directions columns do not contain duplicate values.
+            Ensure that recipeName, ingridients, and directions columns do not contain NULL values 
+        Data Integrity Test:
+            Confirm that the RecipeID in the Recipes Table is used as a foreign key in savedRecipes, ratings, category, RecipeCategories and comments tables
+    
+<br>
+<br>
+<br>
+
+    Table Name: RecipesCategories Table
+    Description: This table links each recipe with its respective category (lunch, breakfast, dinner)
+    Fields:
+        RecipeID (Foreign Key referenceing Recipes.RecipeID): INT NOT NULL AUTO_INCREMENT
+        CategoryID (Foreign Key referenceing Categories.CategoryID): VARCHAR(255)
+        
+    Tests:
+        UNIQUE Constraint Tests:
+            Verify that the  there is redundency with recipes being added to categories.
+            Ensure that RecipeID and CategoryID do not contain NULL values 
+        Data Integrity Test:
+            Confirm that the RecipeID and CategoryID being accessed are valid 
     
 <br>
 <br>
