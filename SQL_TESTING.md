@@ -10,6 +10,11 @@ This document outlines the various SQL tables that will be used in the RecipeVau
 - Lunch: Contains all recipes that are lunch recipes
 - Dinner: Contains all recipes that are Dinner recipes. There may be some overlap with lunch.
 #### Tests: 
+- Insert Test:
+  - If a category is selected under a recipe, that recipe is added to that category
+- Delete Test:
+  - If a category is removed from a recipe, then that recipe is removed from that table group.
+##### Data Access Tests:
 - If no categories are selected, all recipes appear (default to all recipes being shown)
   - User case name:
     - Verify Default page appearance
