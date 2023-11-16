@@ -290,7 +290,7 @@ This document outlines the various SQL tables that will be used in the RecipeVau
 
 ### Data access methods
 
-       Use case name : 
+       Use case name: 
             Verify login with valid user name and password
         Description:
             Test the Recipe Vault login page
@@ -312,3 +312,47 @@ This document outlines the various SQL tables that will be used in the RecipeVau
         Post-conditions (what must be true about the system when the test has completed successfully):
             User is validated with database and successfully signed into their account.
             The account session details are logged in database. 
+
+
+        Use case name: 
+            Accessing saved recipes 
+        Description:
+            Test the saved recipe access functionality
+        Pre-conditions (what needs to be true about the system before the test can be applied):
+            User must be logged in with existing account that has saved recipes
+        Test steps:
+            1. Login with valid user credentials
+            2. Navigate to saved recipes page
+            3. View all saved recipes
+        Expected result:
+            User should be able to view all saved recipes 
+        Actual result (when you are testing this, how can you tell it worked):
+            User can view all saved recipes that are stored in the DB
+        Status (Pass/Fail, when this test was performed)
+            Unknown, haven't completed test yet
+        Notes:
+            N/A
+        Post-conditions (what must be true about the system when the test has completed successfully):
+            The system recognizes the user after login and is able to retrieve all saved recipes tied to the logged in user account
+            
+        
+        Use case name: 
+            Accessing comments
+        Description:
+            Test accessing comments made by users for each recipe
+        Pre-conditions (what needs to be true about the system before the test can be applied):
+            User must be logged in with existing account and access a recipe with saved comments on it
+        Test steps:
+            1. Login with valid user credentials
+            2. Navigate recipes page
+            3. Click on a recipe that has comments
+        Expected result:
+            User should be able to view all comments made for the specific recipe they are viewing 
+        Actual result (when you are testing this, how can you tell it worked):
+            User can view all comments made for any recipe within the DB
+        Status (Pass/Fail, when this test was performed)
+            Unknown, haven't completed test yet
+        Notes:
+            N/A
+        Post-conditions (what must be true about the system when the test has completed successfully):
+            The user must be logged in and the recipe being accessed must have saved comments from other users   

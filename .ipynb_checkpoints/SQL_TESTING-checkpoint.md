@@ -4,12 +4,16 @@
 This document outlines the various SQL tables that will be used in the RecipeVault website project <br>
 ### Category Table: <br>
 #### Description:
-- Contains the possible categories that a recipe could be placed into. This table will contain the recipes that fall into each of the meal categories so that search results can be filtered to only show that category of meal
+- Contains the possible categories that a recipe could be placed into. This table will contain all the possible categories that each recipe could fall into. 
 #### Table Items: 
-- Breakfast: Contains all recipes that are breakfast recipes
-- Lunch: Contains all recipes that are lunch recipes
-- Dinner: Contains all recipes that are Dinner recipes. There may be some overlap with lunch.
+- CategoryID (Primary Key): INT NOT NULL AUTO_INCREMENT
+- CategoryName (category name): VARCHAR(255) (ex. Lunch, Breakfast, Dinner)
 #### Tests: 
+- Insert Test:
+  - If a category is selected under a recipe, that recipe is added to that category
+- Delete Test:
+  - If a category is removed from a recipe, then that recipe is removed from that table group.
+##### Data Access Tests:
 - If no categories are selected, all recipes appear (default to all recipes being shown)
   - User case name:
     - Verify Default page appearance
@@ -247,9 +251,46 @@ This document outlines the various SQL tables that will be used in the RecipeVau
 <br>
 <br>
 
+    Table Name: Recipes Table
+    Description: This table stores all the recipes the app has to offer 
+    Fields:
+        RecipeID (Primary Key): INT NOT NULL AUTO_INCREMENT
+        recipeName (recipe name): VARCHAR(255)
+        ingridients (comma-seperated list): VARCHAR(255)
+        directions (directions on how to make recipe): VARCHAR(255)
+        averageRating (rating base on average of all ratings): FLOAT
+        
+    Tests:
+        UNIQUE Constraint Tests:
+            Verify that the  recipeName, ingridients, and directions columns do not contain duplicate values.
+            Ensure that recipeName, ingridients, and directions columns do not contain NULL values 
+        Data Integrity Test:
+            Confirm that the RecipeID in the Recipes Table is used as a foreign key in savedRecipes, ratings, category, RecipeCategories and comments tables
+    
+<br>
+<br>
+<br>
+
+    Table Name: RecipesCategories Table
+    Description: This table links each recipe with its respective category (lunch, breakfast, dinner)
+    Fields:
+        RecipeID (Foreign Key referenceing Recipes.RecipeID): INT NOT NULL AUTO_INCREMENT
+        CategoryID (Foreign Key referenceing Categories.CategoryID): VARCHAR(255)
+        
+    Tests:
+        UNIQUE Constraint Tests:
+            Verify that the  there is redundency with recipes being added to categories.
+            Ensure that RecipeID and CategoryID do not contain NULL values 
+        Data Integrity Test:
+            Confirm that the RecipeID and CategoryID being accessed are valid 
+    
+<br>
+<br>
+<br>
+
 ### Data access methods
 
-       Use case name : 
+       Use case name: 
             Verify login with valid user name and password
         Description:
             Test the Recipe Vault login page
@@ -271,3 +312,47 @@ This document outlines the various SQL tables that will be used in the RecipeVau
         Post-conditions (what must be true about the system when the test has completed successfully):
             User is validated with database and successfully signed into their account.
             The account session details are logged in database. 
+
+
+        Use case name: 
+            Accessing saved recipes 
+        Description:
+            Test the saved recipe access functionality
+        Pre-conditions (what needs to be true about the system before the test can be applied):
+            User must be logged in with existing account that has saved recipes
+        Test steps:
+            1. Login with valid user credentials
+            2. Navigate to saved recipes page
+            3. View all saved recipes
+        Expected result:
+            User should be able to view all saved recipes 
+        Actual result (when you are testing this, how can you tell it worked):
+            User can view all saved recipes that are stored in the DB
+        Status (Pass/Fail, when this test was performed)
+            Unknown, haven't completed test yet
+        Notes:
+            N/A
+        Post-conditions (what must be true about the system when the test has completed successfully):
+            The system recognizes the user after login and is able to retrieve all saved recipes tied to the logged in user account
+            
+        
+        Use case name: 
+            Accessing comments
+        Description:
+            Test accessing comments made by users for each recipe
+        Pre-conditions (what needs to be true about the system before the test can be applied):
+            User must be logged in with existing account and access a recipe with saved comments on it
+        Test steps:
+            1. Login with valid user credentials
+            2. Navigate recipes page
+            3. Click on a recipe that has comments
+        Expected result:
+            User should be able to view all comments made for the specific recipe they are viewing 
+        Actual result (when you are testing this, how can you tell it worked):
+            User can view all comments made for any recipe within the DB
+        Status (Pass/Fail, when this test was performed)
+            Unknown, haven't completed test yet
+        Notes:
+            N/A
+        Post-conditions (what must be true about the system when the test has completed successfully):
+            The user must be logged in and the recipe being accessed must have saved comments from other users   
