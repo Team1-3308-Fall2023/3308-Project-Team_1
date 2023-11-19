@@ -1,4 +1,4 @@
-<!---Search Page HTML Template for RecipeVault
+<!---Personal Vault Page HTML Template for RecipeVault
 Author: Brooke Neupert
 Date: 11-10-2023
 -->
@@ -6,7 +6,7 @@ Date: 11-10-2023
 <!DOCTYPE html>
 <html>
     <head>
-        <script src="../static/javascript/search_page.js"></script>
+        <script src="../static/javascript/vault_page.js"></script>
         <script>
             function openNav() {
                 document.getElementById("side_menu").style.width = "250px";
@@ -25,10 +25,10 @@ Date: 11-10-2023
     <body>
         <div id="toolbar">
             
-            <h2 id="tb_title"><a href="home_pg.html">RecipeVault</a></h2>
+            <h2 id="tb_title"><a href="home_page.html">RecipeVault</a></h2>
             
-            <button type="button" id="tb_home_button" class="tb_button">&#8962;</button>
-            <button type="button" id="tb_vault_button" class="tb_button">&#128100;</button>
+            <button type="button" id="tb_home_button" class="tb_button"><a href="home_page.html">&#8962;</a></button>
+            <button type="button" id="tb_vault_button" class="tb_button"><a href="vault_page.html">&#128100;</a></button>
             <div id="tb_settings_dropdown">
                 <button type="button" class="dropbtn" id="tb_settings_button">&#9881;</button>
                 <div id="tb_settings_dropdown_items">
@@ -41,8 +41,8 @@ Date: 11-10-2023
         </div>
 
         <div id="page_info">
-            <h2>Search The Vault</h2>
-            <p>Here you can browse all of the recipes available on RecipeVault!</p>
+            <h2>Welcome To Your Vault!</h2>
+            <p>Here you can browse your saved recipes</p>
         </div>
 
         <div id="search_bar">
