@@ -7,40 +7,106 @@ Date: 11-12-2023
 <!DOCTYPE html>
 <html>
 	<head>
-		<script scr="static/javascript/home_page.js"></script>
-		<link rel="stylesheet" href="static/css/home_page.css"/>
+		<script scr="../static/javascript/home_page.js"></script>
+        <script> <!--openNav and closeNav code written by Brooke Neupert, used to make webpages consistent-->
+            function openNav() {
+                document.getElementById("side_menu").style.width = "250px";
+                document.getElementById("main").style.marginLeft = "250px";
+            }
+
+            function closeNav() {
+                document.getElementById("side_menu").style.width = "0";
+                document.getElementById("main").style.marginLeft= "0";
+            }
+        </script>
+		<link type="text/css" rel="stylesheet" href="../static/css/home_page.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>RecipeVault-Home Page</title>
 	</head>
 	<body>
-		<div class="tool bar">
-			<div id="recipes">
-				<p>
-				Recipes
-				</p>
-			</div>
-			<div id="occasions">
-				<p>
-				Occasions
-				</p>
-			</div>
-			<div id="trending">
-				<p>
-				Trending
-				</p>
-			</div>
-			<div id="saved recipes">
-				<p>
-				Saved Recipes
-				</p>
-			</div>
+        <!--All tool bar code written below created by Brooke Neupert-->
+		<div id="toolbar">
 
-		</div>
-	</body>
-	<main>
-		<div class="recipeofday">
-		
-	</main>
+            <h2 id="tb_title"><a href="home_page.html">RecipeVault</a></h2>
+            <button type="button" id="tb_home_button" class="tb_button"><a href="home_page.html">&#8962;</a></button>
+            <button type="button" id="tb_vault_button" class="tb_button"><a href="vault_page.html">&#128100;</a></button>
+            
+            <div id="tb_settings_dropdown">
+                <button type="button" class="dropbtn" id="tb_settings_button">&#9881;</button>
+                <div id="tb_settings_dropdown_items">
+                    <a href="#">Profile Settings</a>
+                    <a href="#">Change Theme</a>
+                    <a href="#">Sign Out</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        <!--Page_info written by Brooke Neupert but text edited by Rebecca-->
+        <div id="page_info">
+            <h2>Welcome to RecipeVault!</h2>
+            <p>A Place to Find Recipes</p>
+        </div>
+        
+        <!-- All search_bar code written by Brooke Neupert-->
+        <div id="search_bar">
+            <input id="search_bar_in" type="text" placeholder="Search">
+            <button type="button">Search</button>
+            <div id="sort_by">
+                <button type="button" class="dropbtn" id="sort_button">Sort Results</button>
+                <div id="sort_dropdowns">
+                    <a><input type="radio" id="rating_sort" name="rating" value="rating">
+                        <label for="rating">Highest Rating</label></a>
+                    <a><input type="radio" id="recent_sort" name="recent" value="recent">
+                        <label for="recent">Most Recent</label></a>
+                    <a><input type="radio" id="time_sort" name="cooktime" value="cooktime">
+                        <label for="cooktime">Cooking Time</label></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="homepagebuttons">
+            <div id="recipes">
+                <button type="button">Recipes</button>
+            </div>
+            <div id="occasions">
+                <button type="button">Occasions</button>
+            </div>
+            <div id="trending">
+                <button type="button">Trending</button>
+            </div>
+            <div id="savedrecipes">
+                <button type="button">Saved Recipes</button>
+            </div>
+        </div>
+        
+        <!-- Open side code written by Brooke Neupert-->        
+        <div id="open_side">
+            <span style="cursor:pointer;color:red;background-color:lightgreen" onclick="openNav()">&#9776; Filter By:</span>
+        </div>
 
+        <div id="recipe_grid">
+
+        </div>
+        
+        <div id="side_menu" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+        </div>
+        
+        <section class="recipeofday">
+            <div class="recipeofdaypicture">
+                <img src="../images/snowballcookie.png" style"postion: absolute; inset: 0px">
+            </div>
+            <div class="recipeofdayinfo">
+                <h2>Recipe of the Day</h2>
+                <h3>Chocolate Snowball Cookies</h3>
+            </div>
+            
+        </section>
+        
+    </body>
 </html>
-	
->>>>>>> f57e912845712bea255662033bebf74906d89f5c
