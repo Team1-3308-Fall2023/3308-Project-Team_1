@@ -108,6 +108,7 @@
 > Fall Break! Team taking time to rest and recharge before tackling the rest of the project and semester.
 
 # Date: November 27th - December 3rd
+<img width="1686" alt="Screenshot 2023-11-27 at 10 23 38 AM" src="https://github.com/Team1-3308-Fall2023/3308-Project-Team_1/assets/97182468/0efc5c33-c4ea-46d7-9f20-bf15618c1f2f">
 
 ### Notes from this week:
 > home_page.html, search_page.html, and vault_page.html files created and pushed to project repo along with other images, css, and javescript files needed for those pages
