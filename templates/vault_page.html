@@ -6,21 +6,9 @@ Date: 11-10-2023
 <!DOCTYPE html>
 <html>
     <head>
-        <script src="../static/javascript/vault_page.js"></script>
-        <script>
-            function openNav() {
-                document.getElementById("side_menu").style.width = "250px";
-                document.getElementById("main").style.marginLeft = "250px";
-            }
-
-            function closeNav() {
-                document.getElementById("side_menu").style.width = "0";
-                document.getElementById("main").style.marginLeft= "0";
-            }
-        </script>
-        <link type="text/css" rel="stylesheet" href="../static/css/search_page.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>RecipeVault-Search</title>
+       <!-- <script src="../static/javascript/vault_page.js"></script>-->
+        <link type="text/css" rel="stylesheet" href="../static/css/vault_page.css">
+        <title>RecipeVault-Your Vault</title>
     </head>
     <body>
         <div id="toolbar">
@@ -28,7 +16,7 @@ Date: 11-10-2023
             <h2 id="tb_title"><a href="home_page.html">RecipeVault</a></h2>
             
             <button type="button" id="tb_home_button" class="tb_button"><a href="home_page.html">&#8962;</a></button>
-            <button type="button" id="tb_vault_button" class="tb_button"><a href="vault_page.html">&#128100;</a></button>
+            <button type="button" id="tb_vault_button" class="tb_button"><a href="search_page.html">&#128269;</a></button>
             <div id="tb_settings_dropdown">
                 <button type="button" class="dropbtn" id="tb_settings_button">&#9881;</button>
                 <div id="tb_settings_dropdown_items">
@@ -62,22 +50,24 @@ Date: 11-10-2023
         </div>
             
             
-        <div id="open_side">
-            <span style="cursor:pointer;color:red;background-color:lightgreen" onclick="openNav()">&#9776; Filter By:</span>
-        </div>
-
-        <div id="recipe_grid">
-
+        
+        
+<!--Side Menu Pop-out filters-->
+        
+        <div id="side_menu">
+            <button type="button" class="dropbtn" id="open_side">Filter By:</button>
+            <div id="filter_options">
+                <a href="#">Breakfast</a>
+                <a href="#">Lunch</a>
+                <a href="#">Dinner</a>
+                <a href="#">Dessert</a>
+            </div>
         </div>
         
-        <div id="side_menu" class="sidenav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Clients</a>
-            <a href="#">Contact</a>
-        </div>
+        
 
+<!--Display Recipe Tiles-->
+        
         <div id="recipe_grid">
            <div class="row">
               <div class="column">
@@ -118,7 +108,7 @@ Date: 11-10-2023
               </div>
             </div> 
         </div>
-            
+       
     </body>              
 </html>
 

@@ -82,6 +82,7 @@ Purpose: This is the css stylesheet for the search page
     margin: auto;
 }
 
+
 #sort_by {
     display: inline-block;
 }
@@ -102,42 +103,37 @@ Purpose: This is the css stylesheet for the search page
   display: block;
 }
 
-.sidenav {
-  height: 100%; /* 100% Full-height */
-  width: 0; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
-  left: 0;
-  background-color: #111; /* Black*/
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+#open_side {
+    display: inline-block;
+}
+
+#filter_options {
+  display: none;
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  background-color: #f1f1f1;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 2;
 }
 
 /* The navigation menu links */
-.sidenav a {
+#filter_options a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
-  color: #818181;
+  color: #111;
   display: block;
-  transition: 0.3s;
+  
 }
 
 /* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
-  color: #f1f1f1;
+#filter_options a:hover {
+  color: blue;
+  background-color: grey;
 }
 
 /* Position and style the close button (top right corner) */
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
 
 #recipe_grid .row {
     
@@ -167,3 +163,8 @@ Purpose: This is the css stylesheet for the search page
 #sort_by:hover #sort_dropdowns {display: block;}
 
 #sort_by:hover .dropbtn {background-color: #3e8e41;}  
+
+#side_menu:hover .dropbtn {background-color: #3e8e41;}
+
+#side_menu:hover #filter_options {display: block;}
+
