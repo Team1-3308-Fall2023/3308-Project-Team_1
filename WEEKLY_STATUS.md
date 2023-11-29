@@ -90,13 +90,29 @@
 
 # Date: November 6th - November 12th
 
+### Notes from this week:
+> Linnea, Spencer, and Anthony met to discuss back-end items and start designing database tables
+> Team will continue refining database schemas and creating simple tables for utilization in testing of app
+> Rebecca and Brooke met to discuss front-end items and start assigning different html pages to be designed and implemented
+> html for home page is started, pushed folders (static, css, etc.) to our repo that will contain files related to the front-end
+
 # Date: November 13th - November 19th
+
+### Notes from this week:
+> Solidified tables (how many tables we'll need, what attributes they will contain, etc.)
+> Assigned table descriptions to be written for milestone 5
+> Continued research and work put in to solidifying layout and flow of html pages and necessary css styling needs
 
 # Date: November 20th - November 26th
 
->Fall Break!
+> Fall Break! Team taking time to rest and recharge before tackling the rest of the project and semester.
 
 # Date: November 27th - December 3rd
+
+### Notes from this week:
+> home_page.html, search_page.html, and vault_page.html files created and pushed to project repo along with other images, css, and javescript files needed for those pages
+> Continued efforts into finishing writing and designing of tables in database
+> Preliminary research started with writing functions to help access database and fetch/search/save various recipes of interest for a user
 
 # Date: December 4th - December 10th
 
