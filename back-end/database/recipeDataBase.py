@@ -1,6 +1,6 @@
 import sqlite3
 
-#Initialize the database and create the 'users' table if it doesn't exist
+#Initialize the database and create the 'users' table if it doesn't exist (from python3 recipeDataBase.py from /database)
 #Run once to initalize starting tables
 
 conn = sqlite3.connect('recipeDB.db')
@@ -72,6 +72,22 @@ c.execute('''
         FOREIGN KEY (userID) REFERENCES users(id),
         FOREIGN KEY (recipeID) REFERENCES recipes(id)
     );''')
+
+
+c.execute('''
+    CREATE TRIGGER IF NOT EXISTS unique_user
+    BEFORE INSERT ON users
+    FOR EACH ROW
+    WHEN (
+        SELECT COUNT(*)
+        FROM users
+        WHERE username = NEW.username OR password = NEW.password
+    ) > 0
+    BEGIN
+        SELECT RAISE(ABORT, 'Username or password already exists');
+    END;
+''')
+
 
 
 #Insert data
