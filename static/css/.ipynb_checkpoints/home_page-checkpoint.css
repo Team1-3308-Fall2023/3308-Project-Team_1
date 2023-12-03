@@ -1,7 +1,6 @@
-/*Author: Brooke Neupert
-Date: 11-9-23
+/*Code written by Brooke Neupert, using to stay consistent
 
-Purpose: This is the css stylesheet for the search page
+For Home and 404 page
 */
 
 #toolbar {
@@ -12,46 +11,33 @@ Purpose: This is the css stylesheet for the search page
     
 }
 
-body {
-	background-color: #F4F3EE;
-}
-#toolbar {
-	width: 100%;
-	height: 20%;
-	background-color: #E0AFA0;
-}
 
 #tb_title {
     float: left;
     width: 50%;
-    font-size: 50px;
-    font-family: Baumans;
+    font-size: 30px;
+    font-family: Impact;
     color: red;
     margin-bottom: 10px;
-	margin-left: 20px;
-	
 }
 
 .tb_button {
     float: right;
-    width: 50px;
-    background-color: Transparent;
-    color: #463F3A;
+    width: 100px;
+    background-color: magenta;
+    color: purple;
     height: 50px;
     font-size: 30px;
-	border: none;
-	margin-top: 5%;
-	
 }
 
 #tb_settings_button {
-    width: 50px;
+    background-color: blue;
+    padding: 2px;
+    width: 100px;
     height: 50px;
-    background-color:Transparent;
-    color: #463F3A;
+    background-color:magenta;
+    color: purple;
     font-size: 30px;
-	margin-top: 100%;
-	border: none;
     
 }
 
@@ -75,6 +61,14 @@ body {
   padding: 12px 16px;
   text-decoration: none;
   display: block;
+}
+
+#occasions {
+    display: inline-block;
+}
+
+#trending {
+    display: inline-block;
 }
 
 #page_info {
@@ -116,37 +110,42 @@ body {
   display: block;
 }
 
-#open_side {
-    display: inline-block;
-}
-
-#filter_options {
-  display: none;
-  height: 100%;
-  width: 200px;
-  position: fixed;
-  background-color: #f1f1f1;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 2;
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
 
 /* The navigation menu links */
-#filter_options a {
+.sidenav a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
-  color: #111;
+  color: #818181;
   display: block;
-  
+  transition: 0.3s;
 }
 
 /* When you mouse over the navigation links, change their color */
-#filter_options a:hover {
-  color: blue;
-  background-color: grey;
+.sidenav a:hover {
+  color: #f1f1f1;
 }
 
 /* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
 
 #recipe_grid .row {
     
@@ -177,7 +176,20 @@ body {
 
 #sort_by:hover .dropbtn {background-color: #3e8e41;}  
 
-#side_menu:hover .dropbtn {background-color: #3e8e41;}
+h1,
+h3 {
+    margin: 0;
+    font-weight: 400;
+    text-transform: capitalize;
+}
 
-#side_menu:hover #filter_options {display: block;}
+h1 {
+    margin-top: 0;
+    font-size: 100;
+}
+
+h3 {
+    text-align: center;
+    font-size: 40;
+}
 
