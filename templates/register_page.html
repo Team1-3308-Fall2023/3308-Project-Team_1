@@ -14,7 +14,8 @@ Purpose: Serve as register page template for new users-->
 	<div id="login_fields">
 		<h1>Register</h1>
 		<div id="login_form">
-			<form method="POST">
+<!-- 			<form method="POST"> -->
+            	<form method="POST" action="{{ url_for('register') }}">
 				<label for="username">Username:</label>
 				<input type="text" name="username" required>
 				<br>

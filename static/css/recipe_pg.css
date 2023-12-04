@@ -1,7 +1,13 @@
-button {
+.ratings button {
 	background-color: Transparent;
 	border:none;
 }
 
-button:focus {
+.ratings button:focus {
 	color: orange;
+}
+    
+.save-recipe button {
+    background-color: White;
+	border: 1px solid #333;
+}
