@@ -33,7 +33,7 @@ def search_route():
 #Login Page:
 @app.route('/login')
 def login():
-	exists, username=get_user(render_template("login.html"))
+	exists, username = get_user(render_template("login.html"))
 	if exists:
 		return user_vault(username)
 	else:
@@ -47,6 +47,7 @@ def user_vault(username):
 @app.route('/not_found')
 def error404():
 	return render_template("404.html")
+
 
 # main driver function
 if __name__ == '__main__':

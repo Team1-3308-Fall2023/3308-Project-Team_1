@@ -164,6 +164,7 @@ body {
   margin-top: 8px;
   vertical-align: middle;
 }
+#tb_title a:visited {color: #463F3A; text-decoration: none;}
 
 #tb_settings_dropdown_items a:hover {background-color: #ddd;}
 

@@ -1,0 +1,40 @@
+body {
+	background-color: #F4F3EE;
+}
+
+h1 {
+	font-family: Baumans;
+	color: #463F3A;
+	text-align: center;
+	
+}
+#submit {
+	background-color: #BCB8B1;
+	color: #F4F3EE;
+	font-family: Artifika;
+	font-size: 15px;
+	padding: 4px;
+	margin: auto;
+	margin-top: 5px;
+	border-radius: 4px;
+}
+
+#login_form {
+	margin: auto;
+	color: #463F3A;
+	text-align: center;
+	width: 50%;
+	font-family: Artifika;
+}
+
+#login_fields {
+	background-color: #E0AFA0;
+	color: #8A817C;
+	width: 50%;
+	height: 50%;
+	margin: auto;
+	padding: 20px;
+	border-radius: 5px;
+	
+	
+}

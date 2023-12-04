@@ -1,0 +1,31 @@
+<!--Author: Anthony Le (css styling + minor edits  by BN)
+Date: 12-3-23
+Purpose: Serve as register page template for new users-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+	<link rel=stylesheet href="../static/css/login_page.css">
+	<link href='https://fonts.googleapis.com/css?family=Artifika' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Baumans' rel='stylesheet'>
+</head>
+<body>
+	<div id="login_fields">
+		<h1>Register</h1>
+		<div id="login_form">
+			<form method="POST">
+				<label for="username">Username:</label>
+				<input type="text" name="username" required>
+				<br>
+				<label for="password">Password:</label>
+				<input type="password" name="password" required>
+				<br>
+				<input id="submit" type="submit" value="Register">
+			</form>
+			<a href="{{ url_for('login') }}">Already have an account? Login</a>
+		</div>
+		
+	</div>
+</body>
+</html>
