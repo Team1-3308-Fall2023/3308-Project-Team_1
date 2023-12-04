@@ -38,6 +38,15 @@ def login():
 		return user_vault(username)
 	else:
 		return render_template("signup.html")
+
+@app.route('/signup')
+def signup():
+	exists, username = get_user(render_template("signup.html"))
+	if exists:
+		#if user is in db, then redirect to login page
+		return render_template("login.html")
+	else:
+		#create new user and go to empty vault
 	
 #Vault Page route
 @app.route('/user/<username>/my_vault')
@@ -48,6 +57,9 @@ def user_vault(username):
 def error404():
 	return render_template("404.html")
 
+@app.route('/<recipe-title>/recipe')
+def recipe_page(recipe_name):
+	return render_template("recipe_pg.html")
 
 # main driver function
 if __name__ == '__main__':
