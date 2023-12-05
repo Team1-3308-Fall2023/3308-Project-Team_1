@@ -58,9 +58,15 @@ def user_vault(username):
 def error404():
 	return render_template("404.html")
 
-@app.route('/<recipe_title>/recipe')
+@app.route('/recipes/<recipe_title>/<int:recipe_id>')
 def recipe_page(recipe_name):
-	return render_template("recipe_pg.html")
+    
+	recipe_info = retrieve_recipe(recipe_id)
+    
+    comms = retrieve_comments(recipe_id)
+    
+    #added comms argument so it can be accessed in the recipe_pg.html page using jinja templating syntax
+    return render_template("recipe_pg.html", comms=comms) 
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():

@@ -9,7 +9,6 @@ from flask import Flask, url_for
 from markupsafe import escape
 from flask import render_template
 from flask import request
-from functions import *
 
 app = Flask(__name__)
 
@@ -40,14 +39,14 @@ def login():
 	else:
 		return render_template("signup.html")
 
-# @app.route('/signup')
-# def signup():
-# 	exists, username = get_user(render_template("signup.html"))
-# 	if exists:
-# 		#if user is in db, then redirect to login page
-# 		return render_template("login.html")
-# 	else:
-# 		#create new user and go to empty vault
+@app.route('/signup')
+def signup():
+	exists, username = get_user(render_template("signup.html"))
+	if exists:
+		#if user is in db, then redirect to login page
+		return render_template("login.html")
+	else:
+		#create new user and go to empty vault
 	
 #Vault Page route
 @app.route('/user/<username>/my_vault')
@@ -58,39 +57,9 @@ def user_vault(username):
 def error404():
 	return render_template("404.html")
 
-@app.route('/recipes/<recipe_title>/<int:recipe_id>')
+@app.route('/<recipe-title>/recipe')
 def recipe_page(recipe_name):
-    
-	recipe_info = retrieve_recipe(recipe_id)
-    
-    comms = retrieve_comments(recipe_id)
-    
-    #added comms argument so it can be accessed in the recipe_pg.html page using jinja templating syntax
-    return render_template("recipe_pg.html", comms=comms) 
-
-@app.route('/register', methods=['GET', 'POST'])
-def register():
-    if request.method == 'POST':
-        username = request.form['username']
-        password = request.form['password']
-
-        insert_user(username, password)
-
-        # redirects the user to a home page by using @app.route('/registration-success') 
-        return redirect(url_for('registration_success'))
-
-    return render_template('register_page.html')
-
-@app.route('/registration-success')
-def registration_success():
-    return render_template('home_page.html')
-
-@app.route('/user_info')
-def see_users():
-    get_newly_added_user()
-    return 
-
-
+	return render_template("recipe_pg.html")
 
 # main driver function
 if __name__ == '__main__':

@@ -35,7 +35,35 @@
 			<li>Set aside one piece of bread, and put cheese and salami on one piece of bread (the side with the mustard</li>
 			<li>Top with the other piece of bread mustard side down and enjoy!</li>
 		</ol>
+        
+        <br>
+        <br>
+        
+        <h4>Comments</h4>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Comments</th>
+                    <th>date</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in comms %}
+                    <tr>
+                        <td>{{ row[0] }}</td>
+                        <td>{{ row[1] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        
 	</body>
+    
+    
+    
+    
 </html>
+
+
 
 		
