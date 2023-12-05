@@ -29,7 +29,9 @@ Date: 11-12-2023
             <h2 id="tb_title"><a href="home_page.html">RecipeVault</a></h2>
             <button type="button" id="tb_home_button" class="tb_button"><a href="home_page.html">&#8962;</a></button>
             <button type="button" id="tb_vault_button" class="tb_button"><a href="vault_page.html">&#128100;</a></button>
-            
+            {% if username %}
+                <div id="tb_username">{{ username }}</div>
+            {% endif %}
             <div id="tb_settings_dropdown">
                 <button type="button" class="dropbtn" id="tb_settings_button">&#9881;</button>
                 <div id="tb_settings_dropdown_items">

@@ -5,7 +5,7 @@
 #import statements: 
 import prefix
 
-from flask import Flask, url_for, jsonify, redirect
+from flask import Flask, url_for, jsonify, redirect, session, render_template
 from markupsafe import escape
 from flask import render_template
 from flask import request
@@ -24,7 +24,9 @@ def prefix_url():
 #default (Home Page)
 @app.route('/')
 def home_route():
-	return render_template("home_page.html")
+    username = session.get('username')  # retrieve username from the session
+    return render_template("home_page.html", username=username)
+	# return render_template("home_page.html")
 
 #Search Page route
 @app.route('/search')
@@ -32,14 +34,34 @@ def search_route():
 	return render_template("search_page.html")
 
 #Login Page:
-@app.route('/login')
+@app.route('/login', methods=['GET','POST'])
 def login():
-	exists, username = get_user(render_template("login.html"))
-	if exists:
-		return user_vault(username)
-	else:
-		return render_template("signup.html")
+    if request.method == 'POST':
+     # extracts values of the username and password fields from the form data submitted by the user
+        username = request.form['username']
+        password = request.form['password']
 
+        # if login is successful, store username in session
+        if check_credentials(username, password):
+            session['username'] = username
+            return redirect(url_for('/'))
+        else:
+            return render_template('login_page.html', error='Invalid credentials')
+    else:
+        return render_template('login_page.html')
+#ORIGINAL
+	# exists, username = get_user(render_template("login.html"))
+	# if exists:
+	# 	return user_vault(username)
+	# else:
+	# 	return render_template("signup.html")
+    
+@app.route('/logout')
+def logout():
+    session.pop('username', None)
+    return redirect(url_for('login_page.html'))
+
+# ROUTE WAS UNFINISHED
 # @app.route('/signup')
 # def signup():
 # 	exists, username = get_user(render_template("signup.html"))
