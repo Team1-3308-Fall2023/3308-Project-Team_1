@@ -66,6 +66,41 @@ def add_recipe_to_vault(user_id, recipe_id):
 
     conn.commit()
     conn.close()
+    
+def retrieve_comments(recipe_id):
+    conn = sqlite3.connect('recipeDB.db')
+    c = conn.cursor()
+    
+    c.execute(
+        '''SELECT comment, event_datetime 
+        FROM comments 
+        WHERE recipeID = recipe_id
+        ORDERED BY event_datetime''', 
+        (recipe_id))
+    
+    recipe_comments = c.fetchall()
+    
+    conn.commit()
+    conn.close()   
+    
+    return recipe_comments
+
+def retrieve_recipe(recipe_id):
+    conn = sqlite3.connect('recipeDB.db')
+    c = conn.cursor()
+    
+    c.execute(
+        '''SELECT recipeName, ingridients, directions, averageRating
+        FROM recipes 
+        WHERE id = recipe_id''', 
+        (recipe_id))
+    
+    recipe_info = c.fetchall()
+    
+    conn.commit()
+    conn.close()   
+    
+    return recipe_info
 
     
     
