@@ -76,7 +76,7 @@ def retrieve_comments(recipe_id):
         '''SELECT comment, event_datetime 
         FROM comments 
         WHERE recipeID = recipe_id
-        ORDERED BY event_datetime''', 
+        ORDER event_datetime''', 
         (recipe_id))
     
     recipe_comments = c.fetchall()
