@@ -22,7 +22,7 @@ def get_newly_added_user():
         FROM users;
     ''')
 
-    result = c.fetchone()
+    result = c.fetchall()
     conn.close()
     return result
     

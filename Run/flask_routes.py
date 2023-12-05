@@ -5,7 +5,7 @@
 #import statements: 
 import prefix
 
-from flask import Flask, url_for
+from flask import Flask, url_for, jsonify
 from markupsafe import escape
 from flask import render_template
 from flask import request
@@ -48,7 +48,8 @@ def login():
 # 		return render_template("login.html")
 # 	else:
 # 		#create new user and go to empty vault
-	
+
+    
 #Vault Page route
 @app.route('/user/<username>/my_vault')
 def user_vault(username):
@@ -58,15 +59,9 @@ def user_vault(username):
 def error404():
 	return render_template("404.html")
 
-@app.route('/recipes/<recipe_title>/<int:recipe_id>')
+@app.route('/<recipe_title>/recipe')
 def recipe_page(recipe_name):
-    
-	recipe_info = retrieve_recipe(recipe_id)
-    
-    comms = retrieve_comments(recipe_id)
-    
-    #added comms argument so it can be accessed in the recipe_pg.html page using jinja templating syntax
-    return render_template("recipe_pg.html", comms=comms) 
+	return render_template("recipe_pg.html")
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
@@ -83,12 +78,19 @@ def register():
 
 @app.route('/registration-success')
 def registration_success():
-    return render_template('home_page.html')
+    return render_template("home_page.html")
 
 @app.route('/user_info')
 def see_users():
-    get_newly_added_user()
-    return 
+    user_info = get_newly_added_user()
+    
+    # check if user_info is not None before returning
+    if user_info:
+        # you can modify this based on your actual database schema
+        return jsonify({'User Info': user_info})
+    else:
+        # return response if no user is found
+        return jsonify({'message': 'No user found'}), 404
 
 
 
