@@ -74,9 +74,9 @@ def retrieve_comments(recipe_id):
     c.execute(
         '''SELECT comment, event_datetime 
         FROM comments 
-        WHERE recipeID = recipe_id
-        ORDER event_datetime''', 
-        (recipe_id))
+        WHERE recipeID = ?
+        ORDER BY event_datetime''', 
+        (recipe_id,))
     
     recipe_comments = c.fetchall()
     
@@ -90,10 +90,10 @@ def retrieve_recipe(recipe_id):
     c = conn.cursor()
     
     c.execute(
-        '''SELECT recipeName, ingridients, directions, averageRating
+        '''SELECT recipeName, ingredients, directions, averageRating
         FROM recipes 
-        WHERE id = recipe_id''', 
-        (recipe_id))
+        WHERE id = ?''', 
+        (recipe_id,))
     
     recipe_info = c.fetchall()
     

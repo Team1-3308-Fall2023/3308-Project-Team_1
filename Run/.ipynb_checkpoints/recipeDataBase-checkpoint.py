@@ -121,13 +121,19 @@ test_recipes = [
     
 ]
 
+test_comments = [
+    ('comment1', 1, 1),
+    ('comment2', 2, 1)
 
+]
 
 c.executemany('INSERT INTO users (username, password) VALUES (?, ?)', test_accounts)
 
 c.executemany('INSERT INTO categories (categoryName) VALUES (?)', test_categories)
 
 c.executemany('INSERT INTO recipes (recipeName, ingredients, directions) VALUES (?, ?, ?)', test_recipes)
+
+c.executemany('INSERT INTO comments (comment, userID ,recipeID) VALUES (?, ?, ?)', test_comments)
 
 #Insert testing
 

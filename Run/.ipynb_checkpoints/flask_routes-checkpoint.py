@@ -34,13 +34,12 @@ def home():
 @app.route('/search', methods=['GET','POST'])
 def search():
     if request.method == 'POST':
-<<<<<<< HEAD
-         # extracts value from search field
-=======
+
+
         #         Added by L, experimenting
         username = session.get('username')  # retrieve username from the session
         # extracts value from search field
->>>>>>> 899aaaf0ac8cc66ee344556e77e3af21dc0b2faa
+
         keyword = request.form['keyword']
         
         recipe_list = search_recipes_by_query(keyword)
@@ -100,13 +99,9 @@ def user_vault(username):
 def error404():
 	return render_template("404.html")
 
-<<<<<<< HEAD
+
 @app.route('/recipes/<string:recipe_title>/<int:recipe_id>')
-def recipe_page(recipe_id):
-=======
-@app.route('/recipes/<recipe_title>/<int:recipe_id>')
-def recipes(recipe_id):
->>>>>>> 899aaaf0ac8cc66ee344556e77e3af21dc0b2faa
+def recipes(recipe_title, recipe_id):
 
     recipe_info = retrieve_recipe(recipe_id)
 
