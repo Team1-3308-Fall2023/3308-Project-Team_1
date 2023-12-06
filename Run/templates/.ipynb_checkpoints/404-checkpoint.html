@@ -5,15 +5,15 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Error</title>
-        <link rel="stylesheet" href="../static/css/home_page.css"/>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/home_page.css') }}">
 
     </head>
     <body>
         <!--tool bar:written by Brooke Neupert-->
         <div id="toolbar">
 
-            <h2 id="tb_title"><a href="home_page.html">RecipeVault</a></h2>
-            <button type="button" id="tb_home_button" class="tb_button"><a href="home_page.html">&#8962;</a></button>
+            <h2 id="tb_title"><a href="{{ url_for('home') }}">RecipeVault</a></h2>
+            
             <button type="button" id="tb_vault_button" class="tb_button"><a href="vault_page.html">&#128100;</a></button>
             
             <div id="tb_settings_dropdown">
@@ -23,7 +23,17 @@
                     <a href="#">Change Theme</a>
                     <a href="#">Sign Out</a>
                 </div>
+                
             </div>
+            
+                        <div id="user_info">
+                {% if username %}
+                    <p>Welcome, {{ username }}!</p>
+                {% else %}
+                    <p>Not logged in</p>
+                {% endif %}
+            </div>
+            
         </div>
         <!--error -->
         <main class="page error-page">
