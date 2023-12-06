@@ -196,9 +196,11 @@ body {
   vertical-align: middle;
 }
 
-#tb_title a:link {text-decoration: none;}
+#tb_title a:link {color: #463F3A; text-decoration: none;}
 
 #tb_title a:visited {color: #463F3A; text-decoration: none;}
+
+#tb_title a:active {color: #463F3A; text-decoration: none;}
 
 .tb_button a:link {text-decoration: none;}
 

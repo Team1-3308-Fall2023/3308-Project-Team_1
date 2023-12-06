@@ -46,15 +46,12 @@ Date: 11-10-2023
 		
 		
 <!--Search Bar and Sort By-->
+		<!--Spencer Oram Search Bar Code-->
         <div id="search_bar">
-            <input id="search_bar_in" type="text" placeholder="Search">
-            <button type="button" id="searchbtn">Search</button>
-
            <form method="POST" action="{{ url_for('search') }}">
-				<label for="search">Search Recipes:</label>
-				<input type="text" name="keyword" required>
+				<label id="search_label" for="search">Search Recipes:</label>
+				<input id="search_bar_in" type="text" name="keyword" required>
 				<input id="submit" type="submit" value="search">
-			</form>
 
             <div id="sort_by">
                 <button type="button" class="dropbtn" id="sort_button">Sort Results</button>
@@ -67,6 +64,7 @@ Date: 11-10-2023
                         <label for="cooktime">Cooking Time</label></a>
                 </div>
             </div>
+			</form>
         </div>
             
             

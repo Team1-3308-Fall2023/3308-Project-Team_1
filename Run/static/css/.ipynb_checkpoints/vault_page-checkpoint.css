@@ -7,6 +7,7 @@ Purpose: This is the css stylesheet for the vault page
 body {
 	background-color: #F4F3EE;
 }
+
 #toolbar {
 	width: 100%;
 	height: 20%;
@@ -195,9 +196,11 @@ body {
   vertical-align: middle;
 }
 
-#tb_title a:link {text-decoration: none;}
+#tb_title a:link {color: #463F3A; text-decoration: none;}
 
 #tb_title a:visited {color: #463F3A; text-decoration: none;}
+
+#tb_title a:active {color: #463F3A; text-decoration: none;}
 
 .tb_button a:link {text-decoration: none;}
 
