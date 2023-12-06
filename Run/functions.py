@@ -102,8 +102,21 @@ def retrieve_recipe(recipe_id):
     
     return recipe_info
 
-    
-    
+def check_credentials(username, password):
+    conn = sqlite3.connect('recipeDB.db')
+    c = conn.cursor()
+    # SELECT query to check credentials
+    query = "SELECT * FROM users WHERE username=? AND password=?"
+    c.execute(query, (username, password))
+
+    # fetch the result
+    result = c.fetchone()
+    c.close()
+
+    # check if the result is not None (means credentials are valid)
+    return result is not None
+
+
     
 if __name__ == "__main__":
     # Example usage:
