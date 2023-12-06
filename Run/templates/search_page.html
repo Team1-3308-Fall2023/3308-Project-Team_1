@@ -40,8 +40,11 @@ Date: 11-10-2023
         </div>
 
         <div id="search_bar">
-            <input id="search_bar_in" type="text" placeholder="Search">
-            <button type="button">Search</button>
+           <form method="POST" action="{{ url_for('search') }}">
+				<label for="search">Search Recipes:</label>
+				<input type="text" name="keyword" required>
+				<input id="submit" type="submit" value="search">
+			</form>
             <div id="sort_by">
                 <button type="button" class="dropbtn" id="sort_button">Sort Results</button>
                 <div id="sort_dropdowns">

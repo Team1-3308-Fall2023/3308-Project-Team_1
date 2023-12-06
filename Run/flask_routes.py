@@ -29,9 +29,19 @@ def home_route():
 	# return render_template("home_page.html")
 
 #Search Page route
-@app.route('/search')
+@app.route('/search', methods=['GET','POST'])
 def search_route():
-	return render_template("search_page.html")
+	if request.method == 'POST':
+         # extracts value from search field
+        keyword = request.form['keyword']
+        
+        recipe_list = search_recipes_by_query(keyword)
+        
+        return render_template('search_results.html', recipes=recipe_list, search_term=keyword)
+        
+    else:
+        return render_template("search_page.html")
+    
 
 #Login Page:
 @app.route('/login', methods=['GET','POST'])
@@ -89,7 +99,7 @@ def recipe_page(recipe_id):
     comms = retrieve_comments(recipe_id)
 
     #added comms argument so it can be accessed in the recipe_pg.html page using jinja templating syntax
-    return render_template("recipe_pg.html", comms=comms) 
+    return render_template("recipe-pg.html", comms=comms) 
 
 
 @app.route('/register', methods=['GET', 'POST'])
