@@ -12,6 +12,7 @@ from flask import request
 from functions import *
 
 app = Flask(__name__)
+app.secret_key = 'asdfghjkl'
 
 prefix.use_PrefixMiddleware(app)
 
@@ -22,8 +23,8 @@ def prefix_url():
     return 'The URL for this page is {}'.format(url_for('prefix_url'))
 
 #default (Home Page)
-@app.route('/')
-def home_route():
+@app.route('/home')
+def home():
     username = session.get('username')  # retrieve username from the session
     return render_template("home_page.html", username=username)
 	# return render_template("home_page.html")
@@ -54,7 +55,7 @@ def login():
         # if login is successful, store username in session
         if check_credentials(username, password):
             session['username'] = username
-            return redirect(url_for('/'))
+            return redirect(url_for('home'))
         else:
             return render_template('login_page.html', error='Invalid credentials')
     else:
@@ -69,7 +70,7 @@ def login():
 @app.route('/logout')
 def logout():
     session.pop('username', None)
-    return redirect(url_for('login_page.html'))
+    return redirect(url_for('/login'))
 
 # ROUTE WAS UNFINISHED
 # @app.route('/signup')
@@ -119,8 +120,8 @@ def register():
 def registration_success():
     return render_template("home_page.html")
 
-@app.route('/user_info')
-def see_users():
+@app.route('/users')
+def users():
     user_info = get_newly_added_user()
     
     # check if user_info is not None before returning
