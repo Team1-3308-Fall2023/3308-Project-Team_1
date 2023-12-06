@@ -8,7 +8,7 @@ Date: 11-10-2023
     <head>
 		<!--static files-->
         <script src="../static/javascript/search_page.js"></script>
-        <link type="text/css" rel="stylesheet" href="../static/css/search_page.css">
+        <link rel=stylesheet href="{{ url_for('static', filename='css/search_page.css') }}">
 		
 		<!--Google Fonts  :)-->
 		<link href='https://fonts.googleapis.com/css?family=Baumans' rel='stylesheet'>
@@ -22,9 +22,9 @@ Date: 11-10-2023
 <!--toolbar code-->
         <div id="toolbar">
             
-            <h2 id="tb_title"><a href="home_page.html">RecipeVault</a></h2>
+            <h2 id="tb_title"><a href="{{ url_for('home') }}">RecipeVault</a></h2>
             
-            <button type="button" id="tb_home_button" class="tb_button"><a href="home_page.html">&#8962;</a></button>
+            <!-- <button type="button" id="tb_home_button" class="tb_button"><a href="home_page.html">&#8962;</a></button> -->
             <button type="button" id="tb_vault_button" class="tb_button"><a href="vault_page.html">&#128100;</a></button>
             <div id="tb_settings_dropdown">
                 <button type="button" class="dropbtn" id="tb_settings_button">&#9881;</button>

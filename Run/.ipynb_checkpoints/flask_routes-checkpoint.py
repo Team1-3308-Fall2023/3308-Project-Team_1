@@ -18,6 +18,10 @@ prefix.use_PrefixMiddleware(app)
 
 
 #Gets URL When run in csel.io virtual machine
+@app.route('/')
+def index():
+	return redirect(url_for('login'))
+	
 @app.route('/prefix_url')  
 def prefix_url():
     return 'The URL for this page is {}'.format(url_for('prefix_url'))
@@ -35,6 +39,10 @@ def home():
 def search():
     if request.method == 'POST':
 
+<<<<<<< HEAD
+=======
+         # extracts value from search field
+>>>>>>> 81504bcdf201d2bd6cee8607085f4111d0d4d3eb
 
         #         Added by L, experimenting
         username = session.get('username')  # retrieve username from the session
@@ -101,7 +109,16 @@ def error404():
 
 
 @app.route('/recipes/<string:recipe_title>/<int:recipe_id>')
+<<<<<<< HEAD
 def recipes(recipe_title, recipe_id):
+=======
+def recipe_page(recipe_id):
+	return 0
+
+@app.route('/recipes/<recipe_title>/<int:recipe_id>')
+def recipes(recipe_id):
+
+>>>>>>> 81504bcdf201d2bd6cee8607085f4111d0d4d3eb
 
     recipe_info = retrieve_recipe(recipe_id)
 

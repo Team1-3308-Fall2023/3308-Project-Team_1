@@ -7,7 +7,7 @@ Date: 11-10-2023
 <html>
     <head>
        <!-- <script src="../static/javascript/vault_page.js"></script>-->
-        <link  rel="stylesheet" href="../static/css/vault_page.css">
+        <link rel=stylesheet href="{{ url_for('static', filename='css/vault_page.css') }}">
 		
 		<!--Google Fonts-->
 		<link href='https://fonts.googleapis.com/css?family=Baumans' rel='stylesheet'>
@@ -18,7 +18,7 @@ Date: 11-10-2023
     <body>
         <div id="toolbar">
             
-            <h2 id="tb_title"><a href="home">RecipeVault</a></h2>
+            <h2 id="tb_title"><a href="{{ url_for('home') }}">RecipeVault</a></h2>
             
             <button type="button" id="tb_home_button" class="tb_button"><a href="home_page.html">&#8962;</a></button>
             <button type="button" id="tb_vault_button" class="tb_button"><a href="search_page.html">&#128269;</a></button>
@@ -93,40 +93,40 @@ Date: 11-10-2023
         <div id="recipe_grid">
            <div class="row">
               <div class="column">
-                <img src="../images/spaghettis.jpg">
-                <img src="../images/spaghettis.jpg">
-                <img src="../images/spaghettis.jpg">
-                <img src="../images/spaghettis.jpg">
-                <img src="../images/spaghettis.jpg">
-                <img src="../images/spaghettis.jpg">
-                <img src="../images/spaghettis.jpg">
+                <img src="{{ url_for('static', filename='spaghettis.jpg') }}"/>
+                <img src="{{ url_for('static', filename='spaghettis.jpg') }}"/>
+                <img src="{{ url_for('static', filename='spaghettis.jpg') }}"/>
+                <img src="{{ url_for('static', filename='spaghettis.jpg') }}"/>
+                <img src="{{ url_for('static', filename='spaghettis.jpg') }}"/>
+                <img src="{{ url_for('static', filename='spaghettis.jpg') }}"/>
+                <img src="{{ url_for('static', filename='spaghettis.jpg') }}"/>
               </div>
               <div class="column">
-                <img src="../images/spaghettis.jpg">
-                <img src="../images/spaghettis.jpg">
-                <img src="../images/spaghettis.jpg">
-                <img src="../images/spaghettis.jpg">
-                <img src="../images/spaghettis.jpg">
-                <img src="../images/spaghettis.jpg">
-                <img src="../images/spaghettis.jpg">
+                <img src="{{ url_for('static', filename='spaghettis.jpg') }}"/>
+                <img src="{{ url_for('static', filename='spaghettis.jpg') }}"/>
+                <img src="{{ url_for('static', filename='spaghettis.jpg') }}"/>
+                <img src="{{ url_for('static', filename='spaghettis.jpg') }}"/>
+                <img src="{{ url_for('static', filename='spaghettis.jpg') }}"/>
+                <img src="{{ url_for('static', filename='spaghettis.jpg') }}"/>
+                <img src="{{ url_for('static', filename='spaghettis.jpg') }}"/>
               </div>
               <div class="column">
-                <img src="../images/spaghettis.jpg">
-                <img src="../images/spaghettis.jpg">
-                <img src="../images/spaghettis.jpg">
-                <img src="../images/spaghettis.jpg">
-                <img src="../images/spaghettis.jpg">
-                <img src="../images/spaghettis.jpg">
-                <img src="../images/spaghettis.jpg">
+                <img src="{{ url_for('static', filename='spaghettis.jpg') }}"/>
+                <img src="{{ url_for('static', filename='spaghettis.jpg') }}"/>
+                <img src="{{ url_for('static', filename='spaghettis.jpg') }}"/>
+                <img src="{{ url_for('static', filename='spaghettis.jpg') }}"/>
+                <img src="{{ url_for('static', filename='spaghettis.jpg') }}"/>
+                <img src="{{ url_for('static', filename='spaghettis.jpg') }}"/>
+                <img src="{{ url_for('static', filename='spaghettis.jpg') }}"/>
               </div>
               <div class="column">
-                <img src="../images/spaghettis.jpg">
-                <img src="../images/spaghettis.jpg">
-                <img src="../images/spaghettis.jpg">
-                <img src="../images/spaghettis.jpg">
-                <img src="../images/spaghettis.jpg">
-                <img src="../images/spaghettis.jpg">
-                <img src="../images/spaghettis.jpg">
+                <img src="{{ url_for('static', filename='spaghettis.jpg') }}"/>
+                <img src="{{ url_for('static', filename='spaghettis.jpg') }}"/>
+                <img src="{{ url_for('static', filename='spaghettis.jpg') }}"/>
+                <img src="{{ url_for('static', filename='spaghettis.jpg') }}"/>
+                <img src="{{ url_for('static', filename='spaghettis.jpg') }}"/>
+                <img src="{{ url_for('static', filename='spaghettis.jpg') }}"/>
+                <img src="{{ url_for('static', filename='spaghettis.jpg') }}"/>
               </div>
             </div> 
         </div>
