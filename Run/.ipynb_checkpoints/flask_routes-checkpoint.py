@@ -32,7 +32,7 @@ def home():
 #Search Page route
 @app.route('/search', methods=['GET','POST'])
 def search_route():
-	if request.method == 'POST':
+    if request.method == 'POST':
          # extracts value from search field
         keyword = request.form['keyword']
         
