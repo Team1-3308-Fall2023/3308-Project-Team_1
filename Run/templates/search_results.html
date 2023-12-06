@@ -8,9 +8,24 @@
 </head>
 <body>
     <h1>Search Results for "{{ search_term }}"</h1>
+    
+    
+    
+    <div id="toolbar">
+        <div id="user_info">
+            {% if username %}
+                <p>Welcome, {{ username }}!</p>
+            {% else %}
+                <p>Not logged in</p>
+            {% endif %}
+        </div>
+    </div>
+    
+    
+    
     <ul>
         {% for recipe in recipes %}
-            <li><a href="{{ url_for('recipes', recipe[1], recipe[0]) }}">{{ recipe[1] }}</a></li>
+            <li><a href="{{ url_for('recipes', recipe_title=recipe[1], recipe_id=recipe[0]) }}">{{ recipe[1] }}</a></li>
         {% endfor %}
     </ul>
 </body>

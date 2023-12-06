@@ -6,6 +6,22 @@
 	</head>
 	<body style="background-color:#F4F3EE" >
 		<h1>Sandwich</h1>
+        
+        
+        
+        <div id="toolbar">
+            <div id="user_info">
+                {% if username %}
+                    <p>Welcome, {{ username }}!</p>
+                {% else %}
+                    <p>Not logged in</p>
+                {% endif %}
+            </div>
+        </div>
+        
+        
+        
+        
         <div class="save-recipe">
             <button onclick="add_recipe_to_vault(user_id, recipe_id)">Save Recipe</button> <!--'Save Recipe' button -->
         </div>
