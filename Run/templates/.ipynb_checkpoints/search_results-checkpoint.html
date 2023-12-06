@@ -10,7 +10,7 @@
     <h1>Search Results for "{{ search_term }}"</h1>
     <ul>
         {% for recipe in recipes %}
-            <li><a href="{{ url_for('recipes', recipe[1], recipe[0]) }}">{{ recipe[1] }}</a></li>
+            <li><a href="{{ url_for('recipes', recipe_title=recipe[1], recipe_id=recipe[0]) }}">{{ recipe[1] }}</a></li>
         {% endfor %}
     </ul>
 </body>

@@ -31,8 +31,8 @@ def home():
 
 #Search Page route
 @app.route('/search', methods=['GET','POST'])
-def search_route():
-	if request.method == 'POST':
+def search():
+    if request.method == 'POST':
          # extracts value from search field
         keyword = request.form['keyword']
         
@@ -92,7 +92,7 @@ def user_vault(username):
 def error404():
 	return render_template("404.html")
 
-@app.route('/recipes/<recipe_title>/<int:recipe_id>')
+@app.route('/recipes/<string:recipe_title>/<int:recipe_id>')
 def recipe_page(recipe_id):
 
     recipe_info = retrieve_recipe(recipe_id)
