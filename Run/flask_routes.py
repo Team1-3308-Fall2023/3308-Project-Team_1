@@ -31,9 +31,10 @@ def home():
 
 #Search Page route
 @app.route('/search', methods=['GET','POST'])
-def search_route():
+def search():
     if request.method == 'POST':
-         # extracts value from search field
+        # extracts value from search field
+        0cb6f6c (commiting to be able to pull)
         keyword = request.form['keyword']
         
         recipe_list = search_recipes_by_query(keyword)
@@ -93,7 +94,7 @@ def error404():
 	return render_template("404.html")
 
 @app.route('/recipes/<recipe_title>/<int:recipe_id>')
-def recipe_page(recipe_id):
+def recipes(recipe_id):
 
     recipe_info = retrieve_recipe(recipe_id)
 
