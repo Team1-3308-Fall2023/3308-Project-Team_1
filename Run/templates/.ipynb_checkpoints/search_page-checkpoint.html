@@ -34,7 +34,20 @@ Date: 11-10-2023
                     <a href="#">Sign Out</a>
                 </div>
             </div>
-           
+
+            
+            
+            <div id="user_info">
+                {% if username %}
+                    <p>Welcome, {{ username }}!</p>
+                {% else %}
+                    <p>Not logged in</p>
+                {% endif %}
+            </div>
+            
+            
+            
+            
         </div>
         
 <!--Page info- static text-->

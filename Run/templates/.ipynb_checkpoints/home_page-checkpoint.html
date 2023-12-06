@@ -18,11 +18,12 @@ Date: 11-12-2023
 		<div id="toolbar">
 
             <h2 id="tb_title"><a href="home_page.html">RecipeVault</a></h2>
-            <button type="button" id="tb_home_button" class="tb_button"><a href="home_page.html">&#8962;</a></button>
-            <button type="button" id="tb_vault_button" class="tb_button"><a href="vault_page.html">&#128100;</a></button>
-            {% if username %}
-                <div id="tb_username">{{ username }}</div>
-            {% endif %}
+            <!--  Original code for 'buttons' commented out. Don't need a 'Home' button on home page      --> 
+<!--             <button type="button" id="tb_home_button" class="tb_button"><a href="home_page.html">Home</a></button>  
+            <button type="button" id="tb_vault_button" class="tb_button"><a href="vault_page.html">My Vault</a></button>-->
+            <button type="button" id="tb_vault_button" class="tb_button"><a href="{{ url_for('user_vault', username=username) }}">My Vault</a></button> 
+            <button type="button" id="search_button" class="tb_button"><a href="{{ url_for('search') }}">Search Recipes</a></button>
+    
             <div id="tb_settings_dropdown">
                 <button type="button" class="dropbtn" id="tb_settings_button">&#9881;</button>
                 <div id="tb_settings_dropdown_items">
@@ -31,6 +32,18 @@ Date: 11-12-2023
                     <a href="#">Sign Out</a>
                 </div>
             </div>
+            
+        
+            <div id="user_info">
+                {% if username %}
+                    <p>Welcome, {{ username }}!</p>
+                {% else %}
+                    <p>Not logged in</p>
+                {% endif %}
+            </div>
+            
+            
+            
         </div>
         
         

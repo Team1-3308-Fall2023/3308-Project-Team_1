@@ -27,22 +27,25 @@ def prefix_url():
 def home():
     username = session.get('username')  # retrieve username from the session
     return render_template("home_page.html", username=username)
+
 	# return render_template("home_page.html")
 
 #Search Page route
 @app.route('/search', methods=['GET','POST'])
 def search():
     if request.method == 'POST':
+        #         Added by L, experimenting
+        username = session.get('username')  # retrieve username from the session
         # extracts value from search field
-        0cb6f6c (commiting to be able to pull)
         keyword = request.form['keyword']
         
         recipe_list = search_recipes_by_query(keyword)
-        
-        return render_template('search_results.html', recipes=recipe_list, search_term=keyword)
+
+        return render_template('search_results.html', recipes=recipe_list, search_term=keyword, username=username)
         
     else:
-        return render_template("search_page.html")
+        username = session.get('username')  # retrieve username from the session
+        return render_template("search_page.html", username=username)
     
 
 #Login Page:
