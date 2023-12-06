@@ -8,18 +8,8 @@ Date: 11-12-2023
 <html>
 	<head>
 		<script src="../static/javascript/home_page.js"></script>
-        <script> <!--openNav and closeNav code written by Brooke Neupert, used to make webpages consistent-->
-            function openNav() {
-                document.getElementById("side_menu").style.width = "250px";
-                document.getElementById("main").style.marginLeft = "250px";
-            }
-
-            function closeNav() {
-                document.getElementById("side_menu").style.width = "0";
-                document.getElementById("main").style.marginLeft= "0";
-            }
-        </script>
-		<link rel="stylesheet" href="../static/css/home_page.css"/>
+		<link rel="stylesheet" type="text/css" href="../static/css/home_page.css"/>
+        <link href='https://fonts.googleapis.com/css?family=Baumans' rel='stylesheet'>
 		<title>RecipeVault-Home Page</title>
 	</head>
 	<body>
@@ -44,6 +34,7 @@ Date: 11-12-2023
         
         
         <!--Page_info written by Brooke Neupert but text edited by Rebecca-->
+        <!-- Page info- static text -->
         <div id="page_info">
             <h2>Welcome to RecipeVault!</h2>
             <p>A Place to Find Recipes</p>
@@ -51,8 +42,11 @@ Date: 11-12-2023
         
         <!-- All search_bar code written by Brooke Neupert-->
         <div id="search_bar">
-            <input id="search_bar_in" type="text" placeholder="Search">
-            <button type="button">Search</button>
+            <form method="POST" action="{{ url_for('search') }}">
+				<label for="search">Search Recipes:</label>
+				<input type="text" name="keyword" required>
+				<input id="submit" type="submit" value="search">
+			</form>
             <div id="sort_by">
                 <button type="button" class="dropbtn" id="sort_button">Sort Results</button>
                 <div id="sort_dropdowns">
@@ -65,7 +59,9 @@ Date: 11-12-2023
                 </div>
             </div>
         </div>
-        <!-- links -->
+        
+        
+        <!-- links for recipes, occasions, trending, saved recipes -->
         <div class="links">
             <a href="recipes.html" class="links">Recipes</a>
             <a href="occasions.html" class="links">Occasions</a>
@@ -74,23 +70,19 @@ Date: 11-12-2023
         
         </div>
         
-        <!-- Open side code written by Brooke Neupert-->        
-        <div id="open_side">
-            <span style="cursor:pointer;color:red;background-color:lightgreen" onclick="openNav()">&#9776; Filter By:</span>
-        </div>
-
-        <div id="recipe_grid">
-
-        </div>
         
-        <div id="side_menu" class="sidenav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Clients</a>
-            <a href="#">Contact</a>
-        </div>
+<!--Side Menu Pop-out filters-->
         
+        <div id="side_menu">
+            <button type="button" class="dropbtn" id="open_side">Filter By:</button>
+            <div id="filter_options">
+                <a href="#">Breakfast</a>
+                <a href="#">Lunch</a>
+                <a href="#">Dinner</a>
+                <a href="#">Dessert</a>
+            </div>
+        </div>
+        <!-- Recipe of Day -->
         <section class="recipeofday">
             <div class="recipeofdaypicture">
                 <img src="../images/snowballcookie.png" style"postion: absolute; inset: 0px">
