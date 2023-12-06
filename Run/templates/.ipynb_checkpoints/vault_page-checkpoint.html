@@ -8,6 +8,11 @@ Date: 11-10-2023
     <head>
        <!-- <script src="../static/javascript/vault_page.js"></script>-->
         <link  rel="stylesheet" href="../static/css/vault_page.css">
+		
+		<!--Google Fonts-->
+		<link href='https://fonts.googleapis.com/css?family=Baumans' rel='stylesheet'>
+		<link href='https://fonts.googleapis.com/css?family=Artifika' rel='stylesheet'>
+		
         <title>RecipeVault-Your Vault</title>
     </head>
     <body>
@@ -33,20 +38,37 @@ Date: 11-10-2023
             <p>Here you can browse your saved recipes</p>
         </div>
 
+<!--Search bar and button-->
         <div id="search_bar">
             <input id="search_bar_in" type="text" placeholder="Search">
-            <button type="button">Search</button>
+            <button type="button" id="searchbtn">Search</button>
             <div id="sort_by">
                 <button type="button" class="dropbtn" id="sort_button">Sort Results</button>
                 <div id="sort_dropdowns">
-                    <a><input type="radio" id="rating_sort" name="rating" value="rating">
+                    <a><input type="radio" id="rating_sort" name="sort_opt" value="rating">
                         <label for="rating">Highest Rating</label></a>
-                    <a><input type="radio" id="recent_sort" name="recent" value="recent">
+                    <a><input type="radio" id="recent_sort" name="sort_opt" value="recent">
                         <label for="recent">Most Recent</label></a>
-                    <a><input type="radio" id="time_sort" name="cooktime" value="cooktime">
+                    <a><input type="radio" id="time_sort" name="sort_opt" value="cooktime">
                         <label for="cooktime">Cooking Time</label></a>
                 </div>
             </div>
+            
+            
+            
+            
+            
+            <div id="user_info">
+                {% if username %}
+                    <p>Welcome, {{ username }}!</p>
+                {% else %}
+                    <p>Not logged in</p>
+                {% endif %}
+            </div>
+            
+            
+            
+            
         </div>
             
             

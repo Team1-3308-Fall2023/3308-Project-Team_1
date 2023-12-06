@@ -49,7 +49,7 @@ def search_recipes_by_query(query):
 	# '''
     # Query to select recipes based on their names or related keywords
     c.execute('''
-        SELECT * FROM recipes
+        SELECT id, recipeName FROM recipes
         WHERE recipeName LIKE ? OR ingredients LIKE ? OR directions LIKE ?
 	''', ('%' + query + '%', '%' + query + '%', '%' + query + '%'))
     
