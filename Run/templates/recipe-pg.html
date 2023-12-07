@@ -5,7 +5,7 @@
 		<link rel=stylesheet href="{{ url_for('static', filename='css/recipe_pg.css') }}">
 	</head>
 	<body style="background-color:#F4F3EE" >
-		<h1>Sandwich</h1>
+		<h1>{{ recipe[0][0] }}</h1>
         
         
         
@@ -27,7 +27,7 @@
         </div>
         
 		<p>This is a tasty lunchtime staple!</p>
-		<p>Rating: 5 stars</p>
+		<p>Rating: {{ recipe[0][3] }}</p>
         <div class="ratings">
 		<button>&#9733;</button>
 		<button>&#9733;</button>
@@ -40,6 +40,7 @@
         </div>
 		<h2>Ingredients</h2>
 		<ul>
+            <li>{{ recipe[0][1] }}</li>
 			<li>Sliced Bread</li>
 			<li>Cheese</li>
 			<li>Salamis</li>
@@ -47,7 +48,8 @@
 		</ul>
 		<h2>Instructions</h2>
 		<ol>
-			<li>First, Spread mustard on both pieces of bread</li>
+			<li>{{ recipe[0][2] }}</li>
+            <li>First, Spread mustard on both pieces of bread</li>
 			<li>Set aside one piece of bread, and put cheese and salami on one piece of bread (the side with the mustard</li>
 			<li>Top with the other piece of bread mustard side down and enjoy!</li>
 		</ol>

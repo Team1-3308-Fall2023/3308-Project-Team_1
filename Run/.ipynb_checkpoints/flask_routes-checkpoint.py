@@ -39,7 +39,9 @@ def home():
 def search():
     if request.method == 'POST':
 
+
          # extracts value from search field
+
 
         #         Added by L, experimenting
         username = session.get('username')  # retrieve username from the session
@@ -105,12 +107,11 @@ def error404():
 	return render_template("404.html")
 
 
-@app.route('/recipes/<string:recipe_title>/<int:recipe_id>')
-def recipe_page(recipe_id):
-	return 0
+
 
 @app.route('/recipes/<recipe_title>/<int:recipe_id>')
-def recipes(recipe_id):
+def recipes(recipe_title, recipe_id):
+
 
 
     recipe_info = retrieve_recipe(recipe_id)
@@ -118,7 +119,7 @@ def recipes(recipe_id):
     comms = retrieve_comments(recipe_id)
 
     #added comms argument so it can be accessed in the recipe_pg.html page using jinja templating syntax
-    return render_template("recipe-pg.html", comms=comms) 
+    return render_template("recipe-pg.html", comms=comms, recipe=recipe_info) 
 
 
 @app.route('/register', methods=['GET', 'POST'])
