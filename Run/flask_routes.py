@@ -119,7 +119,7 @@ def recipes(recipe_title, recipe_id):
     comms = retrieve_comments(recipe_id)
 
     #added comms argument so it can be accessed in the recipe_pg.html page using jinja templating syntax
-    return render_template("recipe-pg.html", comms=comms) 
+    return render_template("recipe-pg.html", comms=comms, recipe=recipe_info) 
 
 
 @app.route('/register', methods=['GET', 'POST'])
