@@ -18,7 +18,7 @@ Final Status Report: <br>
 - What you were in the middle of implementing:
 > placeholder
 - What you had planned for the future:
-> placeholder
+> Smart recipe feature that suggests/pulls recipes for a user based on a combination of their preferences, restrictions, likes, dislikes, and currently saved recipes
 - Any known problems (bugs, issues)
 > placeholder
 
