@@ -86,14 +86,20 @@ Date: 11-10-2023
 <!--Side Menu Pop-out filters-->
         
         <div id="side_menu">
-            <button type="button" id="open_side">Filter By:</button>
-            <div id="filter_options">
-                <a href="#">Breakfast</a>
-                <a href="#">Lunch</a>
-                <a href="#">Dinner</a>
-                <a href="#">Dessert</a>
-            </div>
+            <form action="{{ url_for('search') }}" method="POST">
+                <label for="dropdown">Select an option:</label>
+                <select id="dropdown" name="keyword">
+                    <option value="breakfast">Breakfast</option>
+                    <option value="lunch">Lunch</option>
+                    <option value="dinner">Dinner</option>
+                    <option value="vegitarian">Vegitarian</option>
+                </select>
+
+                <button type="submit">Submit</button>
+            </form>
+            
         </div>
+        
         
         
 

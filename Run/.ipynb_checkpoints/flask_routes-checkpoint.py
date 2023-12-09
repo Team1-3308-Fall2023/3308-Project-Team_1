@@ -56,7 +56,22 @@ def search():
     else:
         username = session.get('username')  # retrieve username from the session
         return render_template("search_page.html", username=username)
+
+# @app.route('/process_dropdown', methods=['GET','POST'])
+# def process_dropdown():
+#     if request.method == 'POST':
     
+#         selected_option = request.form.get('selected_option')
+    
+#         username = session.get('username') 
+    
+#         recipe_list = search_recipes_by_query(selected_option)
+
+#         return render_template('search_results.html', recipes=recipe_list, search_term=selected_option, username=username)
+        
+#     else:
+#         username = session.get('username')  # retrieve username from the session
+#         return render_template("search_page.html", username=username)
 
 #Login Page:
 @app.route('/login', methods=['GET','POST'])
