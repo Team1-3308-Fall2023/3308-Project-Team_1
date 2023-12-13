@@ -115,7 +115,8 @@ def logout():
 #Vault Page route
 @app.route('/user/<username>/my_vault')
 def user_vault(username):
-	return render_template("vault_page.html")
+    username = session.get('username') 
+    return render_template("vault_page.html", username=username)
 
 @app.route('/not_found')
 def error404():

@@ -7,7 +7,7 @@ Date: 11-10-2023
 <html>
     <head>
        <!-- <script src="../static/javascript/vault_page.js"></script>-->
-        <link rel=stylesheet href="{{ url_for('static', filename='css/vault_page.css') }}">
+        <link rel=stylesheet type="text/css" href="{{ url_for('static', filename='css/vault_page.css') }}"/>
 		
 		<!--Google Fonts-->
 		<link href='https://fonts.googleapis.com/css?family=Baumans' rel='stylesheet'>
@@ -18,11 +18,12 @@ Date: 11-10-2023
     <body>
         <div id="toolbar">
             
+            <!-- Home, search and vault redirects/buttons -->
             <h2 id="tb_title"><a href="{{ url_for('home') }}">RecipeVault</a></h2>
+
+            <button type="button" id="tb_vault_button" class="tb_button"><a href="{{ url_for('user_vault', username=username)}}">&#128100;</a></button>
             
-            <button type="button" id="tb_home_button" class="tb_button"><a href="home_page.html">&#8962;</a></button>
-            <button type="button" id="tb_vault_button" class="tb_button"><a href="search_page.html">&#128269;</a></button>
-            <div id="tb_settings_dropdown">
+            <button type="button" id="search_button" class="tb_button"><a href="{{ url_for('search') }}">&#128269;</a></button>
                 <button type="button" class="dropbtn" id="tb_settings_button">&#9881;</button>
                 <div id="tb_settings_dropdown_items">
                     <a href="#">Profile Settings</a>
