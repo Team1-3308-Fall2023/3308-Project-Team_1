@@ -12,11 +12,6 @@ Toolbar
 body {
 	background-color: #F4F3EE;
 }
-ul {
-	font-size: 14px;
-	font-family: Artifika;
-	color: #463F3A;
-}
 	
 #toolbar {
 	width: 100%;
@@ -35,12 +30,20 @@ ul {
 	
 }
 
+#s_title {
+    text-align: center;
+    font-size: 30px;
+    font-family: Baumans;
+    margin-bottom: none;
+}
+
 #user_info {
 	float: right;
 	font-size: 14px;
 	font-family: Artifika;
 	color: #463F3A;
 	margin: auto;
+    text-align: center;
 }
 
 .tb_button {
@@ -113,14 +116,12 @@ ul {
 	width: 60%;
     margin: auto;
 	background-color: #F4F3EE;
-	text-align: center;
-	margin-bottom: 10px;
 	
 }
 
 #search_bar_in {
     width: 50%;
-    margin: 25px;
+    margin: auto;
 	background-color: #F4F3EE;
 	font-family: Artifika;
 	font-size: 12px;
@@ -181,12 +182,31 @@ ul {
 
 #side_menu {
 	width: 10%;
-	margin: 10px;
+	font-family: Artifika;
+	color: #463F3A;
 }
 
 #open_side {
     display: inline-block;
 	width: 100%;
+	border-radius: 4px;
+	border-color: #D28B75;
+	background-color: #E0AFA0;
+	color: #463F3A;
+	font-family: Artifika;
+}
+
+#dropdown {
+	width: 100%;
+	border-radius: 4px;
+	border-color:#463F3A;
+	background-color: #F4F3EE;
+	color: #463F3A;
+	font-family: Artifika;
+}
+	
+#side_menu button {
+	display: inline-block;
 	border-radius: 4px;
 	border-color: #D28B75;
 	background-color: #E0AFA0;
@@ -284,20 +304,7 @@ ul {
     display: inline-block;
 }
 
-h1,
-h3 {
-    margin: 0;
-    font-weight: 400;
-    text-transform: capitalize;
-}
 
-h1 {
-    margin-top: 0;
-    font-size: 100;
-}
 
-h3 {
-    text-align: center;
-    font-size: 40;
-}
+
 

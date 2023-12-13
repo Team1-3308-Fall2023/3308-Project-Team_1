@@ -7,7 +7,7 @@ Date: 11-10-2023
 <html>
     <head>
        <!-- <script src="../static/javascript/vault_page.js"></script>-->
-        <link rel=stylesheet type="text/css" href="{{ url_for('static', filename='css/vault_page.css') }}"/>
+        <link rel=stylesheet type="text/css" href="{{ url_for('static', filename='css/search_page.css') }}"/>
 		
 		<!--Google Fonts-->
 		<link href='https://fonts.googleapis.com/css?family=Baumans' rel='stylesheet'>
@@ -24,6 +24,7 @@ Date: 11-10-2023
             <button type="button" id="tb_vault_button" class="tb_button"><a href="{{ url_for('user_vault', username=username)}}">&#128100;</a></button>
             
             <button type="button" id="search_button" class="tb_button"><a href="{{ url_for('search') }}">&#128269;</a></button>
+            <div id="tb_settings_dropdown">
                 <button type="button" class="dropbtn" id="tb_settings_button">&#9881;</button>
                 <div id="tb_settings_dropdown_items">
                     <a href="#">Profile Settings</a>
@@ -31,33 +32,6 @@ Date: 11-10-2023
                     <a href="#">Sign Out</a>
                 </div>
             </div>
-           
-        </div>
-
-        <div id="page_info">
-            <h2>Welcome To Your Vault!</h2>
-            <p>Here you can browse your saved recipes</p>
-        </div>
-
-<!--Search bar and button-->
-        <div id="search_bar">
-            <input id="search_bar_in" type="text" placeholder="Search">
-            <button type="button" id="searchbtn">Search</button>
-            <div id="sort_by">
-                <button type="button" class="dropbtn" id="sort_button">Sort Results</button>
-                <div id="sort_dropdowns">
-                    <a><input type="radio" id="rating_sort" name="sort_opt" value="rating">
-                        <label for="rating">Highest Rating</label></a>
-                    <a><input type="radio" id="recent_sort" name="sort_opt" value="recent">
-                        <label for="recent">Most Recent</label></a>
-                    <a><input type="radio" id="time_sort" name="sort_opt" value="cooktime">
-                        <label for="cooktime">Cooking Time</label></a>
-                </div>
-            </div>
-            
-            
-            
-            
             
             <div id="user_info">
                 {% if username %}
@@ -66,25 +40,53 @@ Date: 11-10-2023
                     <p>Not logged in</p>
                 {% endif %}
             </div>
-            
-            
-            
-            
         </div>
-            
-            
+           
+ 
+
+        <div id="page_info">
+            <h2>Welcome To Your Vault!</h2>
+            <p>Here you can browse your saved recipes</p>
+        </div>
+
+        <!--Search bar and button-->
+        <div id="search_bar">
+           <form method="POST" action="{{ url_for('search') }}">
+				<label id="search_label" for="search">Search Recipes:</label>
+				<input id="search_bar_in" type="text" name="keyword" required>
+				<input id="submit" type="submit" value="search">
+
+            <div id="sort_by">
+                <button type="button" class="dropbtn" id="sort_button">Sort Results</button>
+                <div id="sort_dropdowns">
+                    <a><input type="radio" id="rating_sort" name="sort_val" value="rating">
+                        <label for="rating">Highest Rating</label></a>
+                    <a><input type="radio" id="recent_sort" name="sort_val" value="recent">
+                        <label for="recent">Most Recent</label></a>
+                    <a><input type="radio" id="time_sort" name="sort_val" value="cooktime">
+                        <label for="cooktime">Cooking Time</label></a>
+                </div>
+            </div>
+			</form>
+        </div>
+                   
         
         
 <!--Side Menu Pop-out filters-->
         
         <div id="side_menu">
-            <button type="button" class="dropbtn" id="open_side">Filter By:</button>
-            <div id="filter_options">
-                <a href="#">Breakfast</a>
-                <a href="#">Lunch</a>
-                <a href="#">Dinner</a>
-                <a href="#">Dessert</a>
-            </div>
+            <form action="{{ url_for('search') }}" method="POST">
+                <label for="dropdown">Select an option:</label>
+                <select id="dropdown" name="keyword">
+                    <option value="breakfast">Breakfast</option>
+                    <option value="lunch">Lunch</option>
+                    <option value="dinner">Dinner</option>
+                    <option value="vegitarian">Vegetarian</option>
+                </select>
+
+                <button id="submit_filter" type="submit">Submit</button>
+            </form>
+            
         </div>
         
         

@@ -63,7 +63,7 @@ Date: 11-12-2023
         <div id="search_bar">
             <form method="POST" action="{{ url_for('search') }}">
 				<label id="search_label" for="search">Search Recipes:</label>
-				<input type="text" name="keyword" required>
+				<input id="search_bar_in" type="text" name="keyword" required>
 				<input id="submit" type="submit" value="search">
 				<div id="sort_by">
 					<button type="button" class="dropbtn" id="sort_button">Sort Results</button>
@@ -93,24 +93,32 @@ Date: 11-12-2023
 <!--Side Menu Pop-out filters-->
         
         <div id="side_menu">
-            <button type="button" class="dropbtn" id="open_side">Filter By:</button>
-            <div id="filter_options">
-                <a href="#">Breakfast</a>
-                <a href="#">Lunch</a>
-                <a href="#">Dinner</a>
-                <a href="#">Dessert</a>
-            </div>
+            <form action="{{ url_for('search') }}" method="POST">
+                <label for="dropdown">Select an option:</label>
+                <select id="dropdown" name="keyword">
+                    <option value="breakfast">Breakfast</option>
+                    <option value="lunch">Lunch</option>
+                    <option value="dinner">Dinner</option>
+                    <option value="vegitarian">Vegetarian</option>
+                </select>
+
+                <button id="submit_filter" type="submit">Submit</button>
+            </form>
+            
         </div>
 		
         <!-- Recipe of Day: Rebecca Toland -->
         <section id="recipe_otd" class="recipeofday">
-            <div class="recipeofdaypicture">
-                <img src="{{ url_for('static', filename='snowballcookie.png') }}" align="middle"/>
+            <div class="recipeofdaypicture", style="text-align: center;">
+                <img src="{{ url_for('static', filename='snowballcookie.png') }}"/>
             </div>
 			
             <div class="recipeofdayinfo">
+                <div style="text-align: center;">
                 <h2>Recipe of the Day</h2>
-                <a href="#">Chocolate Snowball Cookies</a>
+                
+                    <a href="#">Chocolate Snowball Cookies</a>
+                </div>
             </div>
             
         </section>
