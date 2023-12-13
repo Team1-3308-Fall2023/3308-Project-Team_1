@@ -3,13 +3,14 @@
 	<head>
 		<title>Recipe Page</title>
 		<link rel=stylesheet href="{{ url_for('static', filename='css/recipe_pg.css') }}">
+		<!--Google Fonts  :)-->
+		<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Baumans'>
+		<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Artifika'>
 	</head>
-	<body style="background-color:#F4F3EE" >
-		<h1>{{ recipe[0][0] }}</h1>
-        
-        
-        
+	<body>
+		
         <div id="toolbar">
+			<h1 id="recipe_name">{{ recipe[0][0] }}</h1>
             <div id="user_info">
                 {% if username %}
                     <p>Welcome, {{ username }}!</p>
@@ -29,15 +30,16 @@
 		<p>This is a tasty lunchtime staple!</p>
 		<p>Rating: {{ recipe[0][3] }}</p>
         <div class="ratings">
-		<button>&#9733;</button>
-		<button>&#9733;</button>
-		<button>&#9733;</button>
-		<button>&#9733;</button>
-		<button>&#9733;</button>
-            
-		<p>Tags:</p>
-		<button href="search_page.html">lunch</button>
+			<button>&#9733;</button>
+			<button>&#9733;</button>
+			<button>&#9733;</button>
+			<button>&#9733;</button>
+			<button>&#9733;</button>
+
+			<p>Tags:</p>
+			<button href="search_page.html">lunch</button>
         </div>
+		
 		<h2>Ingredients</h2>
 		<ul>
             <li>{{ recipe[0][1] }}</li>
