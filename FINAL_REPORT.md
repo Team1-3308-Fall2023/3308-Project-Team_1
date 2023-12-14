@@ -14,12 +14,16 @@ RecipeVault Repo: https://github.com/Team1-3308-Fall2023/3308-Project-Team_1<br>
 
 Final Status Report: <br>
 - What you completed: 
-> placeholder
+> A useable website that allows users to create an account, login, and search for recipes in the RecipeVault database. The database was not only designed to account for the type of meal and what dietary restrictions it takes into consideration, but also the ingredients and user preferences. The webpages are designed to be easy to navigate and visually interesting. 
 - What you were in the middle of implementing:
-> placeholder
+> Sorting results in search page by rating or newest, etc.
+> Scrollable search feed
+> More HTML pages for various recipe categories
 - What you had planned for the future:
 > Smart recipe feature that suggests/pulls recipes for a user based on a combination of their preferences, restrictions, likes, dislikes, and currently saved recipes
+> Recipe tiles to display search results, rather than a list of names
+> More elegant css/html design (better icons, animations and transitions for some divs)
 - Any known problems (bugs, issues)
-> placeholder
+> Some HTML elements load differently in the browser than expected (odd fonts and 
 
 Public Hosting Site: [insert link here]<br>
