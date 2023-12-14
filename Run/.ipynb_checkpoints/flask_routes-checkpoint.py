@@ -114,8 +114,7 @@ def logout():
     
 #Vault Page route
 @app.route('/user/<username>/my_vault')
-def user_vault(username):
-    username = session.get('username') 
+def user_vault(username): 
     return render_template("vault_page.html", username=username)
 
 @app.route('/not_found')
@@ -153,7 +152,8 @@ def register():
 
 @app.route('/registration-success')
 def registration_success():
-    return render_template("home_page.html")
+    username = session.get('username')
+    return render_template("home_page.html", username=username)
 
 @app.route('/users')
 def users():

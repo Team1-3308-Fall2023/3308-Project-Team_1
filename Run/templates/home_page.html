@@ -23,8 +23,10 @@ Date: 11-12-2023
 
             <!-- Home, search and vault redirects/buttons -->
             <h2 id="tb_title"><a href="{{ url_for('home') }}">RecipeVault</a></h2>
-
-            <button type="button" id="tb_vault_button" class="tb_button"><a href="{{ url_for('user_vault', username=username)}}">&#128100;</a></button>
+            
+           
+            <button type="button" id="tb_vault_button" class="tb_button"><a href="{{ url_for('user_vault', username=username) }}">&#128100;</a></button>
+            
             
             <button type="button" id="search_button" class="tb_button"><a href="{{ url_for('search') }}">&#128269;</a></button>
     
