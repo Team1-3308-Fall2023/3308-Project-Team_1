@@ -8,7 +8,8 @@ Developed by The Bash-ful Scripting Squad:<br>
 
 Project Tracker (Trello): https://trello.com/b/EIXK6cRo/recipe-holder-3308?utm_source=eval-email&utm_medium=email&utm_campaign=board-invite<br>
 
-RecipeVault Demo: [insert link to recorded demo here]<br>
+RecipeVault Demo: https://cuboulder.zoom.us/rec/share/eJSb9fCPecquMT33Tp8_itgeXQdEcoODPR_cqhrwOLN4D8HET2eqUmxvDCSX6D5Z.Y30bdvEAzp8JdlPO 
+Passcode: 3=htux#G<br>
 
 RecipeVault Repo: https://github.com/Team1-3308-Fall2023/3308-Project-Team_1<br>
 
@@ -23,7 +24,12 @@ Final Status Report: <br>
 > Smart recipe feature that suggests/pulls recipes for a user based on a combination of their preferences, restrictions, likes, dislikes, and currently saved recipes
 > Recipe tiles to display search results, rather than a list of names
 > More elegant css/html design (better icons, animations and transitions for some divs)
+> More functionality on features like the save recipe button and dropdown lists
 - Any known problems (bugs, issues)
 > Some HTML elements load differently in the browser than expected (odd fonts and 
+> When registering, the home page doesnt load correcting and take in that new user's information
+> The dropdown menus don't function other than the user being able to hover their mouse over them and click on them
+> The links (recipe of the day, trending recipes, occasions) do not redirect the user to an actual functioning page, they are more of a place holder
+> The save recipe button does not actually allow the user to save the recipe to their vault
 
 Public Hosting Site: [insert link here]<br>

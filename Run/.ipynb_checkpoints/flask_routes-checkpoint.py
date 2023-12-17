@@ -152,8 +152,8 @@ def register():
 
 @app.route('/registration-success')
 def registration_success():
-    username = session.get('username')
-    return render_template("home_page.html", username=username)
+
+    return render_template("home_page.html")
 
 @app.route('/users')
 def users():
