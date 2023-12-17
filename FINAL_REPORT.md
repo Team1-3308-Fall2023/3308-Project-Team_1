@@ -22,12 +22,14 @@ Final Status Report: <br>
 > Sorting results in search page by rating or newest, etc.<br>
 > Scrollable search feed<br>
 > More HTML pages for various recipe categories<br>
+> Username consistently shown throughout the pages visited by current user. <br>
 - What you had planned for the future:
 > Smart recipe feature that suggests/pulls recipes for a user based on a combination of their preferences, restrictions, likes, dislikes, and currently saved recipes<br>
 > Recipe tiles to display search results, rather than a list of names<br>
 > More elegant css/html design (better icons, animations and transitions for some divs)<br>
 > More functionality on features like the save recipe button, dropdown lists, weighted recipe rating, comments, etc ...<br>
-> Improve database security.
+> Ability to logout. <br>
+> Improve database security. <br>
 - Any known problems (bugs, issues)
 > Some HTML elements load differently in the browser than expected (odd fonts and <br>
 > When registering, the home page doesnt load correcting and take in that new user's information<br>
