@@ -13,6 +13,8 @@ Passcode: 3=htux#G<br>
 
 RecipeVault Repo: https://github.com/Team1-3308-Fall2023/3308-Project-Team_1<br>
 
+RecipeVault Presentation Slides: https://docs.google.com/presentation/d/1DH4ZNt9M9p49JKLwqUomcVabn1PyGgci30T5-5nYml0/edit?usp=sharing <br>
+
 Final Status Report: <br>
 - What you completed: 
 > A useable website that allows users to create an account, login, and search for recipes in the RecipeVault database. The database was not only designed to account for the type of meal and what dietary restrictions it takes into consideration, but also the ingredients and user preferences. The webpages are designed to be easy to navigate and visually interesting. 
